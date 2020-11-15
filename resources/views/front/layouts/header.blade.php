@@ -31,7 +31,7 @@
         <div class="akea-mobile-header-container akea-container clearfix">
             <div class="akea-logo  akea-item-pdlr">
                 <div class=akea-logo-inner>
-                    <a class href=index.html><img src=upload/logo-2-1.png alt width=140 height=33 title=logo-2></a>
+                    <a class href=# ><img src=upload/logo-2-1.png alt width=140 height=33 title=logo-2></a>
                 </div>
             </div>
             <div class=akea-mobile-menu-right>
@@ -154,7 +154,7 @@
                                 </li>
                                 <li class=akea-center-nav-menu-item>
                                     <div class=akea-above-logo>
-                                        <a href=index.html><img src={{asset('front/')}}/upload/logo-1-1.png alt width=348 height=252 title=logo-1></a>
+                                        <a href="{{route('homepage')}}"><img src={{asset('front/')}}/upload/logo-1-1.png alt width=348 height=252 title=logo-1></a>
                                     </div>
                                     <div class="akea-logo  akea-item-pdlr">
                                         <div class=akea-logo-inner>

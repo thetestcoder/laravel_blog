@@ -1,4 +1,5 @@
 @extends('front.layouts.master')
+@section('title', 'Anasayfa')
 @section('content')
 <div class=akea-page-wrapper id=akea-page-wrapper>
     <div class=gdlr-core-page-builder-body>
@@ -10,41 +11,19 @@
                         <div class="gdlr-core-post-slider-item gdlr-core-item-pdb gdlr-core-item-pdlr clearfix " id="div_2207_1">
                             <div class="gdlr-core-flexslider flexslider gdlr-core-js-2 " data-type=slider data-effect=default data-nav=navigation data-disable-autoslide=1>
                                 <ul class=slides>
+                                    @foreach($articles as $article)
                                     <li>
                                         <div class=gdlr-core-post-slider-slide>
                                             <div class="gdlr-core-post-slider-image gdlr-core-media-image">
-                                                <a href=#><img src={{asset('front/')}}/upload/pexels-photo-736166-1500x635.jpg alt width=1500 height=635 title=pexels-photo-736166><span class=gdlr-core-post-slider-overlay id="span_2207_0"></span></a>
+                                                <a href={{route('single', [$article->getCategory->slug,$article->slug])}}><img src="{{$article->image}}" alt width=1500 height=635 title=pexels-photo-736166><span class=gdlr-core-post-slider-overlay id="span_2207_0"></span></a>
                                             </div>
                                             <div class="gdlr-core-post-slider-caption gdlr-core-center-align">
-                                                <h3 class="gdlr-core-post-slider-title" id="h3_2207_0"><a href=# >Top Amazing Places to Go in Summer</a></h3>
-                                                <div class=gdlr-core-post-slider-widget-info><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><span class=gdlr-core-blog-info-sep >/</span><a href=#>November 6, 2019</a></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class=gdlr-core-blog-info-sep >/</span><a href=# title="Posts by Paul Newman" rel=author>Paul Newman</a></span></div>
+                                                <h3 class="gdlr-core-post-slider-title" id="h3_2207_0"><a href="{{route('single', [$article->getCategory->slug,$article->slug])}}" >{{$article->title}}</a></h3>
+                                                <div class=gdlr-core-post-slider-widget-info><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><span class=gdlr-core-blog-info-sep >/</span><a href=#>{{$article->created_at->diffForHumans()}}</a></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class=gdlr-core-blog-info-sep >/</span><a href=# title="Posts by Paul Newman" rel=author>Paul Newman</a></span></div>
                                             </div>
                                         </div>
                                     </li>
-                                    <li>
-                                        <div class=gdlr-core-post-slider-slide>
-                                            <div class="gdlr-core-post-slider-image gdlr-core-media-image">
-                                                <a href=#><img src={{asset('front/')}}/upload/hugues-de-buyer-mimeure-335733-unsplash-1500x635.jpg alt width=1500 height=635 title=hugues-de-buyer-mimeure-335733-unsplash><span class=gdlr-core-post-slider-overlay id="span_2207_1"></span></a>
-                                            </div>
-                                            <div class="gdlr-core-post-slider-caption gdlr-core-center-align">
-                                                <h3 class="gdlr-core-post-slider-title" id="h3_2207_1"><a href=# >10 Most Awesome Breathtaking Places</a></h3>
-                                                <div class=gdlr-core-post-slider-widget-info><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><span class=gdlr-core-blog-info-sep >/</span><a href=#>October 18, 2019</a></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class=gdlr-core-blog-info-sep >/</span><a href=# title="Posts by Paul Newman" rel=author>Paul Newman</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class=gdlr-core-post-slider-slide>
-                                            <div class="gdlr-core-post-slider-image gdlr-core-media-image">
-                                                <a href=#><img src={{asset('front/')}}/upload/brooke-lark-289769-unsplash-1500x635.jpg alt width=1500 height=635 title=brooke-lark-289769-unsplash><span class=gdlr-core-post-slider-overlay id="span_2207_2"></span></a>
-                                            </div>
-                                            <div class="gdlr-core-post-slider-caption gdlr-core-center-align">
-                                                <h3 class="gdlr-core-post-slider-title" id="h3_2207_2"><a href=# >5 Dessert Menus To Make In The Party</a></h3>
-                                                <div class=gdlr-core-post-slider-widget-info><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><span class=gdlr-core-blog-info-sep >/</span><a href=#>June 11, 2019</a></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class=gdlr-core-blog-info-sep >/</span><a href=# title="Posts by Paul Newman" rel=author>Paul Newman</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
+                                    @endforeach
                                 </ul>
                             </div>
                         </div>
@@ -63,14 +42,14 @@
                                     <div class="gdlr-core-item-list gdlr-core-blog-full  gdlr-core-item-mglr gdlr-core-style-left">
                                         <div class="gdlr-core-blog-thumbnail-wrap clearfix">
                                             <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
-                                                <a href=#><img src=upload/pexels-photo-871053-1000x486.jpg alt width=1000 height=486 title=pexels-photo-871053></a>
+                                                <a href=#><img src="{{$article->image}}" alt width=1000 height=486 title=pexels-photo-871053></a>
                                             </div><a href=# class=zilla-likes id=zilla-likes-6613 title="Like this"><span class=zilla-likes-count>261</span> <span class=zilla-likes-postfix></span></a></div>
                                              <div class=gdlr-core-blog-full-content-wrap>
 
                                                  <div class="gdlr-core-blog-full-head clearfix">
                                                      <div class=gdlr-core-blog-full-head-right>
                                                          <h3 class="gdlr-core-blog-title gdlr-core-skin-title" id="h3_2207_3">
-                                                             <a href=# >{{$article->title}}</a>
+                                                             <a href="{{route('single', [$article->getCategory->slug,$article->slug])}}" >{{$article->title}}</a>
                                                          </h3>
                                                          <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider">
                                                              <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author">
@@ -81,7 +60,7 @@
                                                                  <a href=#>{{$article->created_at->diffForHumans()}}</a>
                                                              </span>
                                                              <span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-category">
-                                                                 <a href=# rel=tag>{{$article->category_id}}</a>
+                                                                 <a href=# rel=tag>{{$article->getCategory->name}}</a>
                                                              </span>
                                                          </div>
                                                      </div>
@@ -181,7 +160,6 @@
                                         </p>
                                     </div>
                                 </div>
-                                @include('front.widgets.category_widget')
                                 <div id=tag_cloud-2 class="widget widget_tag_cloud akea-widget">
                                     <h3 class="akea-widget-title">
                                         <span class=akea-widget-head-text>Tags</span>
@@ -304,6 +282,4 @@
                 </div>
             </div>
         </div>
-
-
 @endsection
