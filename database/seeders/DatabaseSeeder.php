@@ -15,14 +15,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $categories = ['Yazılım', "Spor", "Moda", "Teknoloji", "Genel"];
-        foreach($categories as $category){
-            DB::table('categories')->insert([
-                'name'=>$category,
-                'slug'=>Str::slug($category, "-"),
-                'created_at'=>now(),
-                'updated_at'=>now(),
-       ]);
-        }
+        $this->call(CategorySeeder::class);
+        $this->call(ArticleSeeder::class);
     }
 }

@@ -154,7 +154,7 @@
                                 </li>
                                 <li class=akea-center-nav-menu-item>
                                     <div class=akea-above-logo>
-                                        <a href=index.html><img src=upload/logo-1-1.png alt width=348 height=252 title=logo-1></a>
+                                        <a href=index.html><img src={{asset('front/')}}/upload/logo-1-1.png alt width=348 height=252 title=logo-1></a>
                                     </div>
                                     <div class="akea-logo  akea-item-pdlr">
                                         <div class=akea-logo-inner>

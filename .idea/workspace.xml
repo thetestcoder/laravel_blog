@@ -41,7 +41,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605430046971</updated>
-      <workItem from="1605430048032" duration="10888000" />
+      <workItem from="1605430048032" duration="15148000" />
     </task>
     <servers />
   </component>
@@ -49,6 +49,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1440" y="142" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605470772830">
+      <screen x="1024" y="0" width="1366" height="768" />
+    </state>
+    <state x="1440" y="142" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/60.27.964.741/1024.0.1366.768@1024.0.1366.768" timestamp="1605470772830" />
     <state width="918" height="172" key="GridCell.Tab.0.bottom" timestamp="1605431727109">
       <screen x="60" y="27" width="964" height="741" />
     </state>
@@ -73,9 +77,9 @@
       <screen x="1024" y="0" width="1366" height="768" />
     </state>
     <state x="1371" y="167" key="run.anything.popup/60.27.964.741/1024.0.1366.768@1024.0.1366.768" timestamp="1605461270695" />
-    <state x="1370" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1605460610454">
+    <state x="1370" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1605470645877">
       <screen x="1024" y="0" width="1366" height="768" />
     </state>
-    <state x="1370" y="89" width="672" height="678" key="search.everywhere.popup/60.27.964.741/1024.0.1366.768@1024.0.1366.768" timestamp="1605460610454" />
+    <state x="1370" y="89" width="672" height="678" key="search.everywhere.popup/60.27.964.741/1024.0.1366.768@1024.0.1366.768" timestamp="1605470645877" />
   </component>
 </project>
