@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,6 +15,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        $categories = ['Yazılım', "Spor", "Moda", "Teknoloji", "Genel"];
+        foreach($categories as $category){
+            DB::table('categories')->insert([
+                'name'=>$category,
+                'slug'=>Str::slug($category, "-"),
+                'created_at'=>now(),
+                'updated_at'=>now(),
+       ]);
+        }
     }
 }

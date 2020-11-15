@@ -463,17 +463,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div id=gdlr-core-category-background-widget-2 class="widget widget_gdlr-core-category-background-widget akea-widget">
-                                    <h3 class="akea-widget-title"><span class=akea-widget-head-text>Category</span><span class=akea-widget-head-divider></span></h3><span class=clear></span>
-                                    <ul class=gdlr-core-category-background-widget>
-                                        <li class=gdlr-core-with-bg id="li_2207_0"><a href=#><span class=gdlr-core-category-background-widget-content ><span class=gdlr-core-category-background-widget-title >Fashion</span><span class=gdlr-core-category-background-widget-count >5</span></span></a></li>
-                                        <li class=gdlr-core-with-bg id="li_2207_1"><a href=#><span class=gdlr-core-category-background-widget-content ><span class=gdlr-core-category-background-widget-title >Food</span><span class=gdlr-core-category-background-widget-count >6</span></span></a></li>
-                                        <li class=gdlr-core-with-bg id="li_2207_2"><a href=#><span class=gdlr-core-category-background-widget-content ><span class=gdlr-core-category-background-widget-title >Photography</span><span class=gdlr-core-category-background-widget-count >11</span></span></a></li>
-                                        <li class=gdlr-core-with-bg id="li_2207_3"><a href=#><span class=gdlr-core-category-background-widget-content ><span class=gdlr-core-category-background-widget-title >Technology</span><span class=gdlr-core-category-background-widget-count >6</span></span></a></li>
-                                        <li class=gdlr-core-with-bg id="li_2207_4"><a href=#><span class=gdlr-core-category-background-widget-content ><span class=gdlr-core-category-background-widget-title >Travel</span><span class=gdlr-core-category-background-widget-count >9</span></span></a></li>
-                                    </ul>
-                                </div>
-
+                                @include('front.widgets.category_widget')
                                 <div id=tag_cloud-2 class="widget widget_tag_cloud akea-widget">
                                     <h3 class="akea-widget-title">
                                         <span class=akea-widget-head-text>Tags</span>

@@ -41,7 +41,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605430046971</updated>
-      <workItem from="1605430048032" duration="7818000" />
+      <workItem from="1605430048032" duration="10888000" />
     </task>
     <servers />
   </component>
@@ -65,9 +65,17 @@
       <screen x="60" y="27" width="964" height="741" />
     </state>
     <state width="918" height="172" key="GridCell.Tab.0.right/60.27.964.741/1024.0.1366.768@60.27.964.741" timestamp="1605431727109" />
-    <state x="1502" y="309" width="399" height="156" key="NewPhpFileDialog" timestamp="1605434806631">
+    <state x="1502" y="309" width="399" height="156" key="NewPhpFileDialog" timestamp="1605461267822">
       <screen x="1024" y="0" width="1366" height="768" />
     </state>
-    <state x="1502" y="309" width="399" height="156" key="NewPhpFileDialog/60.27.964.741/1024.0.1366.768@1024.0.1366.768" timestamp="1605434806631" />
+    <state x="1502" y="309" width="399" height="156" key="NewPhpFileDialog/60.27.964.741/1024.0.1366.768@1024.0.1366.768" timestamp="1605461267822" />
+    <state x="1371" y="167" key="run.anything.popup" timestamp="1605461270695">
+      <screen x="1024" y="0" width="1366" height="768" />
+    </state>
+    <state x="1371" y="167" key="run.anything.popup/60.27.964.741/1024.0.1366.768@1024.0.1366.768" timestamp="1605461270695" />
+    <state x="1370" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1605460610454">
+      <screen x="1024" y="0" width="1366" height="768" />
+    </state>
+    <state x="1370" y="89" width="672" height="678" key="search.everywhere.popup/60.27.964.741/1024.0.1366.768@1024.0.1366.768" timestamp="1605460610454" />
   </component>
 </project>

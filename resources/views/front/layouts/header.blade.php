@@ -72,7 +72,7 @@
                                             <li class="menu-item"><a href=404.html>404 Page</a></li>
                                         </ul>
                                     </li>
-                                    <li class="menu-item menu-item-has-children"><a href=#>Category</a>
+                                    <li class="menu-item menu-item-has-children"><a href=#>Kategoriler</a>
                                         <ul class=sub-menu>
                                             <li class="menu-item"><a href=photography.html>Photography</a></li>
                                             <li class="menu-item"><a href=travel.html>Travel</a></li>
