@@ -58,7 +58,7 @@
                                 <ul id=menu-main-navigation class=menu>
                                     <li class="menu-item menu-item-home current-menu-item"><a href=index.html aria-current=page>Home</a>
                                         <ul class=sub-menu>
-                                            <li class="menu-item menu-item-home current-menu-item "><a href=index.html aria-current=page>Homepage</a></li>
+                                            <li class="menu-item menu-item-home current-menu-item "><a href={{route('homepage')}} aria-current=page>Anasayfa</a></li>
                                         </ul>
                                     </li>
                                     <li class="menu-item menu-item-has-children"><a href=#>Pages</a>
@@ -127,10 +127,8 @@
                     <div class="akea-navigation akea-item-pdlr clearfix ">
                         <div class=akea-main-menu id=akea-main-menu>
                             <ul id=menu-main-navigation-1 class=sf-menu>
-                                <li class="menu-item menu-item-home current-menu-item akea-normal-menu"><a href=index.html class=sf-with-ul-pre>Home</a>
-                                    <ul class=sub-menu>
-                                        <li class="menu-item menu-item-home current-menu-item " data-size=60><a href=index.html>Homepage</a></li>
-                                    </ul>
+                                <li class="menu-item menu-item-home current-menu-item akea-normal-menu"><a href={{route('homepage')}} class=sf-with-ul-pre>Anasayfa</a>
+
                                 </li>
                                 <li class="menu-item menu-item-has-children akea-normal-menu"><a href=# class=sf-with-ul-pre>Pages</a>
                                     <ul class=sub-menu>

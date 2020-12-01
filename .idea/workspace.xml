@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ee485af3-1ed7-44eb-869a-3ea28124f44f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/homepage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/homepage.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Front/HomepageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Front/HomepageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/layouts/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/widgets/category_widget.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/widgets/category_widget.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +20,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1kJsUjafXrcxedtgyNQwjNZ3mW1" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -29,11 +35,11 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/views/front" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/front" />
     </key>
   </component>
   <component name="RunManager">
@@ -55,7 +61,7 @@
       <workItem from="1605991367677" duration="115000" />
       <workItem from="1606461281911" duration="4000" />
       <workItem from="1606827035138" duration="78000" />
-      <workItem from="1606827148965" duration="2147000" />
+      <workItem from="1606827148965" duration="7017000" />
     </task>
     <servers />
   </component>
