@@ -15,7 +15,8 @@ use App\Models\Category;
 class HomepageController extends Controller
 {
     public function index(){
-        $data['articles']=Article::orderBy('created_at', 'DESC')->get();
+        $data['articles']=Article::orderBy('created_at', 'DESC')->paginate(2);
+        $data['articles']->withPath(url('page'));
         $data['categories'] = Category::inRandomOrder()->get();
         return view('front.homepage', $data);
     }
@@ -33,7 +34,7 @@ class HomepageController extends Controller
     public function category($slug){
         $category = Category::whereSlug($slug)->first() ?? abort(403, 'Bu isimde bir kategori bulunamadı.');
         $data['category']=$category;
-        $data['articles']=Article::where('category_id', $category->id)->orderBy('created_at', 'DESC')->get();
+        $data['articles']=Article::where('category_id', $category->id)->orderBy('created_at', 'DESC')->paginate(1);
         $data['categories'] = Category::inRandomOrder()->get();
         return view('front.category', $data);
     }

@@ -11,25 +11,7 @@
                         <div class="gdlr-core-post-slider-item gdlr-core-item-pdb gdlr-core-item-pdlr clearfix " id="div_2207_1">
                             <div class="gdlr-core-flexslider flexslider gdlr-core-js-2 " data-type=slider data-effect=default data-nav=navigation data-disable-autoslide=1>
                                 <ul class=slides>
-                                @if(count($articles)>0)
-                                    @foreach($articles as $article)
-                                    <li>
-                                        <div class=gdlr-core-post-slider-slide>
-                                            <div class="gdlr-core-post-slider-image gdlr-core-media-image">
-                                                <a href={{route('single', [$article->getCategory->slug,$article->slug])}}><img src="{{$article->image}}" alt width=1500 height=635 title=pexels-photo-736166><span class=gdlr-core-post-slider-overlay id="span_2207_0"></span></a>
-                                            </div>
-                                            <div class="gdlr-core-post-slider-caption gdlr-core-center-align">
-                                                <h3 class="gdlr-core-post-slider-title" id="h3_2207_0"><a href="{{route('single', [$article->getCategory->slug,$article->slug])}}" >{{$article->title}}</a></h3>
-                                                <div class=gdlr-core-post-slider-widget-info><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><span class=gdlr-core-blog-info-sep >/</span><a href=#>{{$article->created_at->diffForHumans()}}</a></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class=gdlr-core-blog-info-sep >/</span><a href=# title="Posts by Paul Newman" rel=author>Paul Newman</a></span></div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    @endforeach
-                                @else
-                                    <div class="alert alert-danger">
-                                        <h1>Bu kategoriye ait yazı bulunamadı.</h1>
-                                    </div>
-                                @endif
+                                @include('front.widgets.articlelist')
                                 </ul>
                             </div>
                         </div>
@@ -95,9 +77,9 @@
                                     </div>
                                     @endforeach
                                 </div>
-                                        <div class="gdlr-core-pagination  gdlr-core-style-circle gdlr-core-right-align gdlr-core-item-pdlr"><span aria-current=page class='page-numbers current'>1</span> <a class=page-numbers href=#>2</a> <a class=page-numbers href=#>3</a> <a class=page-numbers href=#>4</a>
-                                            <a class="next page-numbers" href=#></a>
-                                        </div>
+                                <div class="gdlr-core-pagination  gdlr-core-style-circle gdlr-core-right-align gdlr-core-item-pdlr">
+                                    {{$articles->links()}}
+                                </div>
                                     </div>
                                 </div>
                             </div>

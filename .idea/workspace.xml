@@ -4,8 +4,9 @@
     <list default="true" id="ee485af3-1ed7-44eb-869a-3ea28124f44f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Front/HomepageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Front/HomepageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/layouts/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/widgets/category_widget.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/widgets/category_widget.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/category.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/homepage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/homepage.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +62,7 @@
       <workItem from="1605991367677" duration="115000" />
       <workItem from="1606461281911" duration="4000" />
       <workItem from="1606827035138" duration="78000" />
-      <workItem from="1606827148965" duration="7017000" />
+      <workItem from="1606827148965" duration="11876000" />
     </task>
     <servers />
   </component>
@@ -93,10 +94,10 @@
       <screen x="1024" y="0" width="1366" height="768" />
     </state>
     <state x="1502" y="309" width="399" height="156" key="NewPhpFileDialog/60.27.964.741/1024.0.1366.768@1024.0.1366.768" timestamp="1605461267822" />
-    <state x="1371" y="167" key="run.anything.popup" timestamp="1605478439668">
+    <state x="1371" y="167" key="run.anything.popup" timestamp="1606838683809">
       <screen x="1024" y="0" width="1366" height="768" />
     </state>
-    <state x="1371" y="167" key="run.anything.popup/60.27.964.741/1024.0.1366.768@1024.0.1366.768" timestamp="1605478439668" />
+    <state x="1371" y="167" key="run.anything.popup/60.27.964.741/1024.0.1366.768@1024.0.1366.768" timestamp="1606838683809" />
     <state x="1370" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1605477616035">
       <screen x="1024" y="0" width="1366" height="768" />
     </state>
