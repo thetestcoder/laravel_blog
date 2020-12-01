@@ -160,6 +160,9 @@
                                         </p>
                                     </div>
                                 </div>
+
+                               @include('front.widgets.category_widget')
+
                                 <div id=tag_cloud-2 class="widget widget_tag_cloud akea-widget">
                                     <h3 class="akea-widget-title">
                                         <span class=akea-widget-head-text>Tags</span>
