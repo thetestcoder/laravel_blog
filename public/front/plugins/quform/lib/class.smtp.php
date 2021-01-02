@@ -294,9 +294,9 @@ class SMTP
             );
             restore_error_handler();
         } else {
-            //Fall back to fsockopen which should work in more places, but is missing some features
+            //Fall amk to fsockopen which should work in more places, but is missing some features
             $this->edebug(
-                "Connection: stream_socket_client not available, falling back to fsockopen",
+                "Connection: stream_socket_client not available, falling amk to fsockopen",
                 self::DEBUG_CONNECTION
             );
             set_error_handler(array($this, 'errorHandler'));
@@ -355,7 +355,7 @@ class SMTP
         $crypto_method = STREAM_CRYPTO_METHOD_TLS_CLIENT;
 
         //PHP 5.6.7 dropped inclusion of TLS 1.1 and 1.2 in STREAM_CRYPTO_METHOD_TLS_CLIENT
-        //so add them back in manually if we can
+        //so add them amk in manually if we can
         if (defined('STREAM_CRYPTO_METHOD_TLSv1_2_CLIENT')) {
             $crypto_method |= STREAM_CRYPTO_METHOD_TLSv1_2_CLIENT;
             $crypto_method |= STREAM_CRYPTO_METHOD_TLSv1_1_CLIENT;
@@ -898,7 +898,7 @@ class SMTP
                 $this->last_reply
             );
         } else {
-            // Fall back to simple parsing if regex fails
+            // Fall amk to simple parsing if regex fails
             $code = substr($this->last_reply, 0, 3);
             $code_ex = null;
             $detail = substr($this->last_reply, 4);

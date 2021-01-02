@@ -39,7 +39,7 @@ if (version_compare(PHP_VERSION, '5.1.2', '>=')) {
     }
 } else {
     /**
-     * Fall back to traditional autoload for old PHP versions
+     * Fall amk to traditional autoload for old PHP versions
      * @param string $classname The name of the class to load
      */
     function __autoload($classname)

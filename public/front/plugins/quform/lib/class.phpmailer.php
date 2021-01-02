@@ -1088,7 +1088,7 @@ class PHPMailer
                     $patternselect = 'pcre';
                 }
             } elseif (function_exists('extension_loaded') and extension_loaded('pcre')) {
-                //Fall back to older PCRE
+                //Fall amk to older PCRE
                 $patternselect = 'pcre';
             } else {
                 //Filter_var appeared in PHP 5.2.0 and does not require the PCRE extension
@@ -1977,7 +1977,7 @@ class PHPMailer
                     $maxLength = $maxLength - ($lookBack - $encodedCharPos);
                     $foundSplitPos = true;
                 } elseif ($dec < 192) {
-                    // Middle byte of a multi byte character, look further back
+                    // Middle byte of a multi byte character, look further amk
                     $lookBack += 3;
                 }
             } else {
@@ -2901,7 +2901,7 @@ class PHPMailer
         if (function_exists('quoted_printable_encode')) {
             return quoted_printable_encode($string);
         }
-        // Fall back to a pure PHP implementation
+        // Fall amk to a pure PHP implementation
         $string = str_replace(
             array('%20', '%0D%0A.', '%0D%0A', '%'),
             array(' ', "\r\n=2E", "\r\n", '='),

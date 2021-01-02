@@ -130,17 +130,6 @@
                                 <li class="menu-item menu-item-home current-menu-item akea-normal-menu"><a href={{route('homepage')}} class=sf-with-ul-pre>Anasayfa</a>
 
                                 </li>
-                                <li class="menu-item menu-item-has-children akea-normal-menu"><a href=# class=sf-with-ul-pre>Pages</a>
-                                    <ul class=sub-menu>
-                                        <li class="menu-item" data-size=60><a href=contact.html>Contact</a></li>
-                                        <li class="menu-item" data-size=60><a href=author.html>Author</a></li>
-                                        <li class="menu-item" data-size=60><a href=gallery.html>Gallery</a></li>
-                                        <li class="menu-item" data-size=60><a href=price-table.html>Price Table</a></li>
-                                        <li class="menu-item" data-size=60><a href=maintenance.html>Maintenance</a></li>
-                                        <li class="menu-item" data-size=60><a href=coming-soon.html>Coming Soon</a></li>
-                                        <li class="menu-item" data-size=60><a href=404.html>404 Page</a></li>
-                                    </ul>
-                                </li>
                                 <li class="menu-item menu-item-has-children akea-normal-menu"><a href=# class=sf-with-ul-pre>Kategoriler</a>
                                     <ul class=sub-menu>
                                         @include('front.widgets.category_header')
@@ -157,8 +146,9 @@
                                     </div>
                                 </li>
                                 @foreach($pages as $page)
-                                <li class="menu-item akea-normal-menu"><a href={{route('page', $page->slug)}}>{{$page->title}}</a></li>
-                                @endforeach
+                                <li class="menu-item akea-normal-menu"><a href={{route('page', $page->slug, ['id' => '2'])}}>{{$page->title}}</a></li>
+                                @endforeach()
+                                    <li class="menu-item akea-normal-menu"><a href={{route('contact')}}>İletişim</a></li>
                             </ul>
                             <div class=akea-navigation-slide-bar id=akea-navigation-slide-bar></div>
                         </div>

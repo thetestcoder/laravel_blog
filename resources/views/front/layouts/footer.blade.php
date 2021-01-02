@@ -15,7 +15,7 @@
             </div>
             <div class="akea-footer-column akea-item-pdlr akea-column-20">
                 <div id=gdlr-core-custom-menu-widget-2 class="widget widget_gdlr-core-custom-menu-widget akea-widget">
-                    <h3 class="akea-widget-title"><span class=akea-widget-head-text>Category</span><span class=akea-widget-head-divider></span></h3><span class=clear></span>
+                    <h3 class="akea-widget-title"><span class=akea-widget-head-text>Kategoriler</span><span class=akea-widget-head-divider></span></h3><span class=clear></span>
                     <div class=menu-category-container>
                         <ul id=menu-category class="gdlr-core-custom-menu-widget gdlr-core-menu-style-half">
                             @include('front.widgets.category_header')
@@ -52,14 +52,7 @@
     </div>
     <div class=akea-copyright-wrapper>
         <div class="akea-copyright-container akea-container clearfix">
-            <div class="akea-copyright-left akea-item-pdlr">Copyright 2019 Akea Blog, All Right Reserved</div>
-            <div class="akea-copyright-right akea-item-pdlr">
-                <a href=index.html >Home</a>
-                <a href=about-us.html >About</a>
-                <a href=# >Updates</a>
-                <a href=# >Advertising</a>
-                <a href=contact.html >Contact</a>
-            </div>
+            <div class="akea-copyright-left akea-item-pdlr">Copyright 2021 Umut Çaylı Blog, All Right Reserved</div>
         </div>
     </div>
 </footer>
@@ -68,51 +61,7 @@
 <div class="akea-footer-recent-post-button " id=akea-footer-recent-post-button><i class=icon_plus></i></div>
 <div class="akea-footer-recent-post-bar " id=akea-footer-recent-post-bar>
     <div class=akea-footer-recent-post-bar-close><i class=icon_minus-06></i></div>
-    <div class="akea-footer-recent-post-bar-container akea-container clearfix">
-        <h3 class="akea-footer-recent-post-bar-title">My New Stories</h3>
-        <div class="akea-recent-post-bar-wrap clearfix">
-            <div class=akea-recent-post-bar-item>
-                <div class=akea-recent-post-bar-shadow></div>
-                <a href=#><img src=upload/post-vr-150x150.jpg alt width=150 height=150 title=post-vr></a>
-            </div>
-            <div class=akea-recent-post-bar-item>
-                <div class=akea-recent-post-bar-shadow></div>
-                <a href=#><img src=upload/max-bender-580753-unsplash-150x150.jpg alt width=150 height=150 title=max-bender-580753-unsplash></a>
-            </div>
-            <div class=akea-recent-post-bar-item>
-                <div class=akea-recent-post-bar-shadow></div>
-                <a href=#><img src=upload/juja-han-456323-unsplash-150x150.jpg alt width=150 height=150 title=juja-han-456323-unsplash></a>
-            </div>
-            <div class=akea-recent-post-bar-item>
-                <div class=akea-recent-post-bar-shadow></div>
-                <a href=#><img src=upload/yiran-ding-624696-unsplash-150x150.jpg alt width=150 height=150 title=yiran-ding-624696-unsplash></a>
-            </div>
-            <div class=akea-recent-post-bar-item>
-                <div class=akea-recent-post-bar-shadow></div>
-                <a href=#><img src=upload/christopher-burns-271403-unsplash-150x150.jpg alt width=150 height=150 title=christopher-burns-271403-unsplash></a>
-            </div>
-            <div class=akea-recent-post-bar-item>
-                <div class=akea-recent-post-bar-shadow></div>
-                <a href=#><img src=upload/pexels-photo-736166-150x150.jpg alt width=150 height=150 title=pexels-photo-736166></a>
-            </div>
-            <div class=akea-recent-post-bar-item>
-                <div class=akea-recent-post-bar-shadow></div>
-                <a href=#><img src=upload/pexels-photo-871053-150x150.jpg alt width=150 height=150 title=pexels-photo-871053></a>
-            </div>
-            <div class=akea-recent-post-bar-item>
-                <div class=akea-recent-post-bar-shadow></div>
-                <a href=#><img src=upload/pexels-photo-25284-150x150.jpg alt width=150 height=150 title=pexels-photo-25284></a>
-            </div>
-            <div class=akea-recent-post-bar-item>
-                <div class=akea-recent-post-bar-shadow></div>
-                <a href=#><img src=upload/pexels-photo-225227-150x150.jpg alt width=150 height=150 title=pexels-photo-225227></a>
-            </div>
-            <div class=akea-recent-post-bar-item>
-                <div class=akea-recent-post-bar-shadow></div>
-                <a href=#><img src=upload/hugues-de-buyer-mimeure-335733-unsplash-150x150.jpg alt width=150 height=150 title=hugues-de-buyer-mimeure-335733-unsplash></a>
-            </div>
-        </div>
-    </div>
+
 </div>
 
 <script src='{{asset('front/')}}/js/jquery/jquery.js'></script>
