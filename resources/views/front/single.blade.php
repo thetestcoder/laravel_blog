@@ -23,7 +23,7 @@
                                                 </div>
                                             </header>
                                         </div>
-                                        <div class="akea-single-article-thumbnail akea-media-image"><img src={{$article->image}} alt width=1300 height=530 title=chinh-le-duc-264152-unsplash><a href=# class=zilla-likes id=zilla-likes-7008 title="Like this"><span class=zilla-likes-count>11</span> <span class=zilla-likes-postfix></span></a></div>
+                                        <div class="akea-single-article-thumbnail akea-media-image"><img src="{{asset($article->image)}}" alt width=1300 height=530 title=chinh-le-duc-264152-unsplash><a href=# class=zilla-likes id=zilla-likes-7008 title="Like this"><span class=zilla-likes-count>11</span> <span class=zilla-likes-postfix></span></a></div>
                                         <div class=akea-single-article-content>
                                             <div class=akea-breadcrumbs>
                                                 <div class=akea-breadcrumbs-container>
@@ -40,52 +40,52 @@
                                             <ul class="wp-block-gallery aligncenter columns-5 is-cropped">
                                                 <li class=blocks-gallery-item>
                                                     <figure>
-                                                        <a href=upload/rachel-park-366508-unsplash.jpg><img src=upload/rachel-park-366508-unsplash.jpg alt data-id=6400 data-link=https://demo.goodlayers.com/akea/2018/05/04/top-5-beach-you-will-need-to-visit-once-in-your-life/rachel-park-366508-unsplash/ class=wp-image-6400 ></a>
+                                                        <a href={{asset('front/')}}upload/rachel-park-366508-unsplash.jpg><img src={{asset('front/')}}/upload/rachel-park-366508-unsplash.jpg alt data-id=6400 data-link=https://demo.goodlayers.com/akea/2018/05/04/top-5-beach-you-will-need-to-visit-once-in-your-life/rachel-park-366508-unsplash/ class=wp-image-6400 ></a>
                                                     </figure>
                                                 </li>
                                                 <li class=blocks-gallery-item>
                                                     <figure>
-                                                        <a href=upload/monika-grabkowska-759473-unsplash.jpg><img src=upload/monika-grabkowska-759473-unsplash.jpg alt data-id=6399 data-link=https://demo.goodlayers.com/akea/2018/05/04/top-5-beach-you-will-need-to-visit-once-in-your-life/monika-grabkowska-759473-unsplash/ class=wp-image-6399 ></a>
+                                                        <a href=upload/monika-grabkowska-759473-unsplash.jpg><img src={{asset('front/')}}/upload/monika-grabkowska-759473-unsplash.jpg alt data-id=6399 data-link=https://demo.goodlayers.com/akea/2018/05/04/top-5-beach-you-will-need-to-visit-once-in-your-life/monika-grabkowska-759473-unsplash/ class=wp-image-6399 ></a>
                                                     </figure>
                                                 </li>
                                                 <li class=blocks-gallery-item>
                                                     <figure>
-                                                        <a href=upload/edgar-castrejon-459822-unsplash.jpg><img src=upload/edgar-castrejon-459822-unsplash.jpg alt data-id=6398 data-link=https://demo.goodlayers.com/akea/2018/05/04/top-5-beach-you-will-need-to-visit-once-in-your-life/edgar-castrejon-459822-unsplash/ class=wp-image-6398 ></a>
+                                                        <a href=upload/edgar-castrejon-459822-unsplash.jpg><img src={{asset('front/')}}/upload/edgar-castrejon-459822-unsplash.jpg alt data-id=6398 data-link=https://demo.goodlayers.com/akea/2018/05/04/top-5-beach-you-will-need-to-visit-once-in-your-life/edgar-castrejon-459822-unsplash/ class=wp-image-6398 ></a>
                                                     </figure>
                                                 </li>
                                                 <li class=blocks-gallery-item>
                                                     <figure>
-                                                        <a href=upload/charles-deluvio-271645-unsplash.jpg><img src=upload/charles-deluvio-271645-unsplash.jpg alt data-id=6397 data-link=https://demo.goodlayers.com/akea/2018/05/04/top-5-beach-you-will-need-to-visit-once-in-your-life/charles-deluvio-271645-unsplash/ class=wp-image-6397 ></a>
+                                                        <a href=upload/charles-deluvio-271645-unsplash.jpg><img src={{asset('front/')}}/upload/charles-deluvio-271645-unsplash.jpg alt data-id=6397 data-link=https://demo.goodlayers.com/akea/2018/05/04/top-5-beach-you-will-need-to-visit-once-in-your-life/charles-deluvio-271645-unsplash/ class=wp-image-6397 ></a>
                                                     </figure>
                                                 </li>
                                                 <li class=blocks-gallery-item>
                                                     <figure>
-                                                        <a href=upload/brooke-lark-500141-unsplash.jpg><img src=upload/brooke-lark-500141-unsplash.jpg alt data-id=6396 data-link=https://demo.goodlayers.com/akea/2018/05/04/top-5-beach-you-will-need-to-visit-once-in-your-life/brooke-lark-500141-unsplash/ class=wp-image-6396 ></a>
+                                                        <a href=upload/brooke-lark-500141-unsplash.jpg><img src={{asset('front/')}}/upload/brooke-lark-500141-unsplash.jpg alt data-id=6396 data-link=https://demo.goodlayers.com/akea/2018/05/04/top-5-beach-you-will-need-to-visit-once-in-your-life/brooke-lark-500141-unsplash/ class=wp-image-6396 ></a>
                                                     </figure>
                                                 </li>
                                                 <li class=blocks-gallery-item>
                                                     <figure>
-                                                        <a href=upload/alex-loup-392625-unsplash.jpg><img src=upload/alex-loup-392625-unsplash.jpg alt data-id=6395 data-link=https://demo.goodlayers.com/akea/2018/05/04/top-5-beach-you-will-need-to-visit-once-in-your-life/alex-loup-392625-unsplash/ class=wp-image-6395 ></a>
+                                                        <a href=upload/alex-loup-392625-unsplash.jpg><img src={{asset('front/')}}/upload/alex-loup-392625-unsplash.jpg alt data-id=6395 data-link=https://demo.goodlayers.com/akea/2018/05/04/top-5-beach-you-will-need-to-visit-once-in-your-life/alex-loup-392625-unsplash/ class=wp-image-6395 ></a>
                                                     </figure>
                                                 </li>
                                                 <li class=blocks-gallery-item>
                                                     <figure>
-                                                        <a href=upload/post-item-2.jpg><img src=upload/post-item-2.jpg alt data-id=6328 data-link=https://demo.goodlayers.com/akea/2018/05/01/how-much-will-cost-you-to-travel-in-eastern-europe/post-item-2/ class=wp-image-6328 ></a>
+                                                        <a href=upload/post-item-2.jpg><img src={{asset('front/')}}/upload/post-item-2.jpg alt data-id=6328 data-link=https://demo.goodlayers.com/akea/2018/05/01/how-much-will-cost-you-to-travel-in-eastern-europe/post-item-2/ class=wp-image-6328 ></a>
                                                     </figure>
                                                 </li>
                                                 <li class=blocks-gallery-item>
                                                     <figure>
-                                                        <a href=upload/post-bg-1.jpg><img src=upload/post-bg-1.jpg alt data-id=6325 data-link=https://demo.goodlayers.com/akea/2018/05/01/how-much-will-cost-you-to-travel-in-eastern-europe/post-bg-1/ class=wp-image-6325 ></a>
+                                                        <a href=upload/post-bg-1.jpg><img src={{asset('front/')}}/upload/post-bg-1.jpg alt data-id=6325 data-link=https://demo.goodlayers.com/akea/2018/05/01/how-much-will-cost-you-to-travel-in-eastern-europe/post-bg-1/ class=wp-image-6325 ></a>
                                                     </figure>
                                                 </li>
                                                 <li class=blocks-gallery-item>
                                                     <figure>
-                                                        <a href=upload/pexels-photo-773471.jpg><img src=upload/pexels-photo-773471.jpg alt data-id=6321 data-link=https://demo.goodlayers.com/akea/2018/05/01/how-much-will-cost-you-to-travel-in-eastern-europe/pexels-photo-773471/ class=wp-image-6321 ></a>
+                                                        <a href=upload/pexels-photo-773471.jpg><img src={{asset('front/')}}/upload/pexels-photo-773471.jpg alt data-id=6321 data-link=https://demo.goodlayers.com/akea/2018/05/01/how-much-will-cost-you-to-travel-in-eastern-europe/pexels-photo-773471/ class=wp-image-6321 ></a>
                                                     </figure>
                                                 </li>
                                                 <li class=blocks-gallery-item>
                                                     <figure>
-                                                        <a href=upload/pexels-photo-91993.jpg><img src=upload/pexels-photo-91993.jpg alt data-id=6410 data-link=https://demo.goodlayers.com/akea/2018/05/04/top-5-beach-you-will-need-to-visit-once-in-your-life/pexels-photo-91993/ class=wp-image-6410 ></a>
+                                                        <a href=upload/pexels-photo-91993.jpg><img src={{asset('front/')}}/upload/pexels-photo-91993.jpg alt data-id=6410 data-link=https://demo.goodlayers.com/akea/2018/05/04/top-5-beach-you-will-need-to-visit-once-in-your-life/pexels-photo-91993/ class=wp-image-6410 ></a>
                                                     </figure>
                                                 </li>
                                             </ul>
@@ -99,7 +99,7 @@
                                             </p>
                                             <p>I feel the presence of the Almighty:&nbsp;</p>
                                             <div class=wp-block-image>
-                                                <figure class=aligncenter><img src=upload/brooke-lark-289769-unsplash.jpg alt class=wp-image-6464 ></figure>
+                                                <figure class=aligncenter><img src={{asset('front/')}}/upload/brooke-lark-289769-unsplash.jpg alt class=wp-image-6464 ></figure>
                                             </div>
                                             <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&nbsp;<strong>A small river named Duden flows by</strong>&nbsp;their place and supplies it with the necessary regelialia. It is a paradisematic country in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line.</p>
                                             <p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment and yet.</p>
@@ -124,7 +124,7 @@
                                             </ul><span class=gdlr-core-space-shortcode style="margin-top: 40px ;"></span>
                                             <h4>&nbsp;The bedding was hardly able to cover it</h4>
                                             <div class=wp-block-image>
-                                                <figure class="alignleft is-resized"><img src=upload/eberhard-grossgasteiger-1093164-unsplash.jpg alt class=wp-image-6563 width=310 height=464 >
+                                                <figure class="alignleft is-resized"><img src={{asset('front/')}}/upload/eberhard-grossgasteiger-1093164-unsplash.jpg alt class=wp-image-6563 width=310 height=464 >
                                                     <figcaption><em>Green Forest</em></figcaption>
                                                 </figure>
                                             </div>
@@ -184,7 +184,7 @@
                                         <div class="gdlr-core-blog-grid ">
                                             <div class="gdlr-core-blog-thumbnail-wrap clearfix">
                                                 <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
-                                                    <a href=#><img src=upload/brenda-godinez-228181-unsplash-900x537.jpg alt width=900 height=537 title=brenda-godinez-228181-unsplash></a>
+                                                    <a href=#><img src={{asset('front/')}}/upload/brenda-godinez-228181-unsplash-900x537.jpg alt width=900 height=537 title=brenda-godinez-228181-unsplash></a>
                                                     <div class=gdlr-core-blog-thumbnail-category><a href=# rel=tag>Food</a>,<a href=# rel=tag>Photography</a></div>
                                                 </div>
                                             </div>
@@ -198,7 +198,7 @@
                                         <div class="gdlr-core-blog-grid ">
                                             <div class="gdlr-core-blog-thumbnail-wrap clearfix">
                                                 <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
-                                                    <a href=../../../09/05/the-most-beautiful-green-field-on-earth/index.html><img src=upload/qingbao-meng-330658-unsplash-900x537.jpg alt width=900 height=537 title=qingbao-meng-330658-unsplash></a>
+                                                    <a href=../../../09/05/the-most-beautiful-green-field-on-earth/index.html><img src={{asset('front/')}}/upload/qingbao-meng-330658-unsplash-900x537.jpg alt width=900 height=537 title=qingbao-meng-330658-unsplash></a>
                                                     <div class=gdlr-core-blog-thumbnail-category><a href=# rel=tag>Food</a>,<a href=# rel=tag>Photography</a></div>
                                                 </div>
                                             </div>

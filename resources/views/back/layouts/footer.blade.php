@@ -32,13 +32,13 @@
 <script src="{{asset('back/')}}/vendor/circle-progress/circle-progress.min.js"></script>
 <script src="{{asset('back/')}}/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
 <script src="{{asset('back/')}}/vendor/chartjs/Chart.bundle.min.js"></script>
-<script src="{{asset('back/')}}/vendor/select2/select2.min.js">
-</script>
+<script src="{{asset('back/')}}/vendor/select2/select2.min.js"></script>
 
 <!-- Main JS-->
 <script src="{{asset('back/')}}/js/main.js"></script>
 
-</body>
+@yield('js')
 
+</body>
 </html>
 <!-- end document-->

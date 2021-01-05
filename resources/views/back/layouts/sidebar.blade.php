@@ -32,7 +32,7 @@
 
     <!-- Main CSS-->
     <link href="{{asset('back/')}}/css/theme.css" rel="stylesheet" media="all">
-
+    @yield('css')
 </head>
 
 <body class="animsition">
@@ -53,104 +53,7 @@
                 </div>
             </div>
         </div>
-        <nav class="navbar-mobile">
-            <div class="container-fluid">
-                <ul class="navbar-mobile__list list-unstyled">
-                    <li class="has-sub">
-                        <a class="js-arrow" href="{{route('admin.dashboard')}}">
-                            <i class="fas fa-tachometer-alt"></i>Dashboard</a>
-                        <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                            <li>
-                                <a href="{{asset('back/')}}/index.html">Dashboard 1</a>
-                            </li>
-                            <li>
-                                <a href="{{asset('back/')}}/index2.html">Dashboard 2</a>
-                            </li>
-                            <li>
-                                <a href="{{asset('back/')}}/index3.html">Dashboard 3</a>
-                            </li>
-                            <li>
-                                <a href="{{asset('back/')}}/index4.html">Dashboard 4</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="{{asset('back/')}}/chart.html">
-                            <i class="fas fa-chart-bar"></i>Charts</a>
-                    </li>
-                    <li>
-                        <a href="{{asset('back/')}}/table.html">
-                            <i class="fas fa-table"></i>Tables</a>
-                    </li>
-                    <li>
-                        <a href="{{asset('back/')}}/form.html">
-                            <i class="far fa-check-square"></i>Forms</a>
-                    </li>
-                    <li>
-                        <a href="{{asset('back/')}}/calendar.html">
-                            <i class="fas fa-calendar-alt"></i>Calendar</a>
-                    </li>
-                    <li>
-                        <a href="{{asset('back/')}}/map.html">
-                            <i class="fas fa-map-marker-alt"></i>Maps</a>
-                    </li>
-                    <li class="has-sub">
-                        <a class="js-arrow" href="#">
-                            <i class="fas fa-copy"></i>Pages</a>
-                        <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                            <li>
-                                <a href="{{asset('back/')}}/login.html">Login</a>
-                            </li>
-                            <li>
-                                <a href="{{asset('back/')}}/register.html">Register</a>
-                            </li>
-                            <li>
-                                <a href="{{asset('back/')}}/forget-pass.html">Forget Password</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="has-sub">
-                        <a class="js-arrow" href="#">
-                            <i class="fas fa-desktop"></i>UI Elements</a>
-                        <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                            <li>
-                                <a href="{{asset('back/')}}/button.html">Button</a>
-                            </li>
-                            <li>
-                                <a href="{{asset('back/')}}/badge.html">Badges</a>
-                            </li>
-                            <li>
-                                <a href="{{asset('back/')}}/tab.html">Tabs</a>
-                            </li>
-                            <li>
-                                <a href="{{asset('back/')}}/card.html">Cards</a>
-                            </li>
-                            <li>
-                                <a href="{{asset('back/')}}/alert.html">Alerts</a>
-                            </li>
-                            <li>
-                                <a href="{{asset('back/')}}/progress-bar.html">Progress Bars</a>
-                            </li>
-                            <li>
-                                <a href="{{asset('back/')}}/modal.html">Modals</a>
-                            </li>
-                            <li>
-                                <a href="{{asset('back/')}}/switch.html">Switchs</a>
-                            </li>
-                            <li>
-                                <a href="{{asset('back/')}}/grid.html">Grids</a>
-                            </li>
-                            <li>
-                                <a href="{{asset('back/')}}/fontawesome.html">Fontawesome Icon</a>
-                            </li>
-                            <li>
-                                <a href="{{asset('back/')}}/typo.html">Typography</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+
     </header>
     <!-- END HEADER MOBILE-->
 
@@ -169,8 +72,8 @@
                             <i class="fas fa-tachometer-alt"></i>Post Page</a>
                     </li>
                     <li>
-                        <a href="chart.html">
-                            <i class="fas fa-chart-bar"></i>Charts</a>
+                        <a href="{{route('admin.posts.index')}}">
+                            <i class="fas fa-pound-sign"></i>Post Sayfası</a>
                     </li>
                     <li>
                         <a href="table.html">

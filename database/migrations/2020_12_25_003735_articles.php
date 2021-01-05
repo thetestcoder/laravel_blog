@@ -14,7 +14,7 @@ class Articles extends Migration
     public function up()
     {
         Schema::create('articles', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->unsignedBigInteger('category_id');
             $table->string('title');
             $table->string('image');

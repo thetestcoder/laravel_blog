@@ -27,8 +27,8 @@
                         <i class="zmdi zmdi-filter-list"></i>filters</button>
                 </div>
                 <div class="table-data__tool-right">
-                    <button class="au-btn au-btn-icon au-btn--green au-btn--small">
-                        <i class="zmdi zmdi-plus"></i>add item</button>
+                    <a href="{{route('admin.posts.create')}}" class="au-btn au-btn-icon au-btn--green au-btn--small">
+                        <i class="zmdi zmdi-plus"></i>add item</a>
                     <div class="rs-select2--dark rs-select2--sm rs-select2--dark2">
                         <select class="js-select2" name="type">
                             <option selected="selected">Export</option>
@@ -68,7 +68,7 @@
                         </td>
                         <td>{{$post->title}}</td>
                         <td>
-                            <img src="{{$post->image}}" width="400" height="400">
+                            <img src="{{asset($post->image)}}" width="400" height="400">
                         </td>
                         <td class="desc">{{$post->getCategory->name}}</td>
                         <td>{{$post->created_at->diffForHumans()}}</td>
