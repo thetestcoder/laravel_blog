@@ -16,8 +16,6 @@ use App\Http\Controllers\ImageController;
 #Route::get('admin/panel','App\Http\Controllers\Back\Dashboard@index')->name('admin.dashboard');
 
 // Admin
-Route::get('multiple-image-upload', [ImageController::class, 'multipleImage'])->name('multiple.image');
-Route::post('multiple-image/store', [ImageController::class, 'multipleImageStore'])->name('multiple.image.store');
 
 Route::get('login', 'App\Http\Controllers\Admin\HomeController@login')->name('admin.auth.login');
 Route::post('login', 'App\Http\Controllers\Admin\HomeController@login_post')->name('admin.auth.login.post');
@@ -32,9 +30,9 @@ Route::prefix('admin')->name('admin.')->middleware('Admin')->group(function (){
     Route::get('posts', 'App\Http\Controllers\Admin\PostsController@index')->name('posts.index');
     Route::get('create', 'App\Http\Controllers\Admin\PostsController@create')->name('posts.create');
     Route::get('create/{post_id}', 'App\Http\Controllers\Admin\ImageController@create')->name('admin_image_add');
-    Route::get('store/{post_id}', 'App\Http\Controllers\Admin\ImageController@store')->name('add_image_store');
-    Route::get('delete/{post_id}', 'App\Http\Controllers\Admin\ImageController@destroy')->name('add_image_delete');
-    Route::get('show', 'App\Http\Controllers\Admin\ImageController@show')->name('add_image_show');
+    Route::post('store/{post_id}', 'App\Http\Controllers\Admin\ImageController@store')->name('admin_image_store');
+    Route::get('delete/{id}/{post_id}', 'App\Http\Controllers\Admin\ImageController@destroy')->name('admin_image_delete');
+    Route::get('show', 'App\Http\Controllers\Admin\ImageController@show')->name('admin_image_show');
 
 });
 

@@ -30,7 +30,7 @@
                                     <div class="gdlr-core-item-list gdlr-core-blog-full  gdlr-core-item-mglr gdlr-core-style-left">
                                         <div class="gdlr-core-blog-thumbnail-wrap clearfix">
                                             <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
-                                                <a href=#><img src="{{$article->image}}" alt width=1000 height=486 title=pexels-photo-871053></a>
+                                                <a href=#><img src="{{asset($article->image)}}" alt width=1000 height=486 title=pexels-photo-871053></a>
                                             </div><a href=# class=zilla-likes id=zilla-likes-6613 title="Like this"><span class=zilla-likes-count>261</span> <span class=zilla-likes-postfix></span></a></div>
                                              <div class=gdlr-core-blog-full-content-wrap>
 
@@ -53,7 +53,7 @@
                                                          </div>
                                                      </div>
                                                  </div>
-                                                 <div class=gdlr-core-blog-content>{{Str::limit($article->content,150)}}</div>
+                                                 <div class=gdlr-core-blog-content>{!! \Illuminate\Support\Str::of($article->content)->words(100) !!}</div>
                                                  <div class="gdlr-core-social-share-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-social-share-left-text gdlr-core-style-plain" id="div_2207_3">
                                                      <span class=gdlr-core-social-share-wrap>
                                                          <a class=gdlr-core-social-share-facebook href="#" target=_blank  id="a_2207_0"  >

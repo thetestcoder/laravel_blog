@@ -88,5 +88,10 @@
 <script src='{{asset('front/')}}/js/script-core.js'></script>
 
 
+<script src="{{asset('front/')}}/plugins/quform/js/plugins.js"></script>
+<script src="{{asset('front/')}}/plugins/quform/js/scripts.js"></script>
+
+
+
 </body>
 </html>

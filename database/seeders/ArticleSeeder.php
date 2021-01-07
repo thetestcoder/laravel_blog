@@ -21,7 +21,7 @@ class ArticleSeeder extends Seeder
         for($i=0;$i<4;$i++){
             $title=$faker->sentence(6);
             DB::table('articles')->insert([
-                'category_id'=>rand(1,7),
+                'category_id'=>rand(11,15),
                 'title'=>$title,
                 'image'=>$faker->imageUrl(800, 400, 'cats', true, 'umutlion'),
                 'content'=>$faker->paragraph(6),

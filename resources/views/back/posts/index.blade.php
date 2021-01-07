@@ -75,6 +75,9 @@
                         <td>{{$post->hit}}</td>
                         <td>
                             <div class="table-data-feature">
+                                <a href= "{{route('admin.admin_image_add', ['post_id'=>$post->id])}}" class="item" data-toggle="tooltip" data-placement="top" title="Edit Gallery">
+                                    <i class="zmdi zmdi-folder"></i>
+                                </a>
                                 <a href= "#" class="item" data-toggle="tooltip" data-placement="top" title="Send">
                                     <i class="zmdi zmdi-mail-send"></i>
                                 </a>

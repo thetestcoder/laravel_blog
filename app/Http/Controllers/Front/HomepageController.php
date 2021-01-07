@@ -3,14 +3,13 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Schema;
-use function GuzzleHttp\Promise\all;
 
 // models
 
 
-
+use Illuminate\Support\Str;
 use Illuminate\Validation\Validator;
 use Illuminate\Support\Facades\DB;
 
@@ -18,7 +17,7 @@ use App\Models\Article;
 use App\Models\Category;
 use App\Models\Page;
 use App\Models\Contact;
-
+use App\Models\Image;
 
 
 class HomepageController extends Controller
@@ -40,6 +39,7 @@ class HomepageController extends Controller
         $article->increment('hit');
         $data['article']=$article;
         $data['categories']=Category::inRandomOrder()->get();
+        $data['images']=Image::inRandomOrder()->get();
 
         return view('front.single',$data);
     }
@@ -82,4 +82,5 @@ class HomepageController extends Controller
         return redirect()->route('contact')->with('success','cong');
 
     }
+
 }

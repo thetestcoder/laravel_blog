@@ -15,7 +15,6 @@
     <link rel=stylesheet href='{{asset('front/')}}/css/style-core.css' type=text/css media=all>
     <link rel=stylesheet href='{{asset('front/')}}/css/akea-style-custom.css' type=text/css media=all>
 
-
     <link rel=stylesheet href='https://fonts.googleapis.com/css?family=Poppins%3A400%2C500%2C600%2C700%2C800' type=text/css media=all>
     <link rel=stylesheet href='https://fonts.googleapis.com/css?family=Montserrat' type=text/css media=all>
     <link rel=stylesheet href='https://fonts.googleapis.com/css?family=PT+Serif' type=text/css media=all>

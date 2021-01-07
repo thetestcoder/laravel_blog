@@ -19,7 +19,7 @@
                                             </div>
                                             <div class="gdlr-core-post-slider-caption gdlr-core-center-align">
                                                 <h3 class="gdlr-core-post-slider-title" id="h3_2207_0"><a href="{{route('single', [$article->getCategory->slug,$article->slug])}}" >{{$article->title}}</a></h3>
-                                                <div class=gdlr-core-post-slider-widget-info><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><span class=gdlr-core-blog-info-sep >/</span><a href=#>{{$article->created_at->diffForHumans()}}</a></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class=gdlr-core-blog-info-sep >/</span><a href=# title="Posts by Paul Newman" rel=author>Paul Newman</a></span></div>
+                                                <div class=gdlr-core-post-slider-widget-info><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><span class=gdlr-core-blog-info-sep >/</span>{{$article->created_at->diffForHumans()}}</span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class=gdlr-core-blog-info-sep >/</span><a href=# title="Posts by Paul Newman" rel=author>Paul Newman</a></span></div>
                                             </div>
                                         </div>
                                     </li>

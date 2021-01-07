@@ -54,7 +54,7 @@
                                         <label for="textarea-input" class=" form-control-label">İçerik</label>
                                     </div>
                                     <div class="col-12 col-md-9">
-                                        <textarea id="summernote" name="content"  rows="9" placeholder="Lütfen içerik giriniz..." class="form-control"></textarea>
+                                        <textarea id="editor" name="content"  rows="9" placeholder="Lütfen içerik giriniz..." class="form-control"></textarea>
                                     </div>
                                 </div>
                                 <div class="row form-group">
@@ -74,42 +74,22 @@
                                     </button>
                                 </div>
                             </form>
-                            <form action="{{ route('multiple.image.store') }}" method="POST" enctype="multipart/form-data">
-                                @csrf
-                                <div class="row">
-                                    <div class="col-md-10">
-                                        <input type="file" name="file[]" accept="image/*" multiple="multiple" class="form-control">
-                                    </div>
-
-                                    <div class="col-md-2">
-                                        <button type="submit" class="btn btn-success">Upload</button>
-                                    </div>
-                                </div>
-                                <div class="row mt-3">
-                                    @if ($images = Session::get('files'))
-                                        @foreach($images as $value)
-                                            <div class="col-md-2">
-                                                <img src="{{ asset('images/'.$value) }}" width="100">
-                                            </div>
-                                        @endforeach
-                                    @endif
-                                </div>
-                            </form>
-                        </div>
                     </div>
 
             </div>
 @endsection
 @section('css')
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.css" rel="stylesheet">
 @endsection
 @section('js')
-    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.js"></script>
     <script>
         $(document).ready(function() {
-            $('#summernote').summernote({
-                'height':300
-            });
+            $('#editor').summernote(
+                {
+                    'height':300
+                }
+            );
         });
-    </script>
+   </script>
 @endsection
