@@ -22,17 +22,23 @@ Route::post('login', 'App\Http\Controllers\Admin\HomeController@login_post')->na
 
 
 Route::prefix('admin')->name('admin.')->middleware('Admin')->group(function (){
+   // posts
     Route::get('/', 'App\Http\Controllers\Admin\HomeController@index')->name('dashboard');
     Route::resource('posts', 'App\Http\Controllers\Admin\PostsController');
     Route::get('logout', 'App\Http\Controllers\Admin\HomeController@logout')->name('auth.logout');
     Route::get('register', 'App\Http\Controllers\Admin\HomeController@register')->name('auth.register');
     Route::get('forgetpassword', 'App\Http\Controllers\Admin\HomeController@forget')->name('auth.forget');
     Route::get('posts', 'App\Http\Controllers\Admin\PostsController@index')->name('posts.index');
-    Route::get('create', 'App\Http\Controllers\Admin\PostsController@create')->name('posts.create');
+    Route::get('posts/create', 'App\Http\Controllers\Admin\PostsController@create')->name('posts.create');
     Route::get('create/{post_id}', 'App\Http\Controllers\Admin\ImageController@create')->name('admin_image_add');
     Route::post('store/{post_id}', 'App\Http\Controllers\Admin\ImageController@store')->name('admin_image_store');
     Route::get('delete/{id}/{post_id}', 'App\Http\Controllers\Admin\ImageController@destroy')->name('admin_image_delete');
     Route::get('show', 'App\Http\Controllers\Admin\ImageController@show')->name('admin_image_show');
+    // Category
+    Route::get('/categories', 'App\Http\Controllers\Admin\CategoryController@index')->name('category.index');
+    Route::post('/categories/create', 'App\Http\Controllers\Admin\CategoryController@create')->name('category.create');
+    Route::post('/categories/update','App\Http\Controllers\Admin\CategoryController@update')->name('category.update');
+    Route::get('/categories/getData','App\Http\Controllers\Admin\CategoryController@getData')->name('category.getdata');
 
 });
 

@@ -52,7 +52,7 @@
                                     <div class=gdlr-core-pbf-element>
                                         <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" style="padding-bottom: 0px ;">
                                             <div class=gdlr-core-text-box-item-content style="font-size: 15px ;text-transform: none ;color: #ffffff ;">
-                                                <p>A wonderful serenity has taken possession of my entire soul, like these.</p>
+                                                <p>İletişime geçmek için aşağıdaki sabit hattımızdan bizlere haftaiçi mesai saatleri içerisinde ulaşabilirsiniz.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -157,7 +157,7 @@
                                         <div class="gdlr-core-contact-form-7-item gdlr-core-item-pdlr gdlr-core-item-pdb ">
                                             <div role=form class=wpcf7 id=wpcf7-f1979-p1964-o1 lang=en-US dir=ltr>
                                                 <div class=screen-reader-response></div>
-                                                <form class="quform" action="{{route('contact.post')}}" method="post" enctype="multipart/form-data" onclick="">
+                                                <form class="quform" action="{{route('post.contact')}}" method="post" enctype="multipart/form-data" onclick="">
                                                     @csrf
                                                     <div class="quform-elements">
                                                         <div class="quform-element">

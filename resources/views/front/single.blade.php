@@ -43,7 +43,7 @@
                                             </div>
                                         </div>
                                         <h4>{{$article->title}}</h4>
-                                        <p>{!! $article->content !!}}</p>
+                                        <p>{!! \Illuminate\Support\Str::of($article->content)->words(2000) !!}</p>
                                         <p><strong>Read This :&nbsp;&nbsp;</strong>&nbsp;<a href=../../../11/11/gutenberg-post-ex-1/index.html#>Traveling in Turkey</a></p>
                                         <ul class="wp-block-gallery aligncenter columns-5 is-cropped">
                                             @foreach($images as $image)
@@ -54,7 +54,7 @@
                                                 </li>
                                             @endforeach
                                         </ul>
-                                        <p>{!! \Illuminate\Support\Str::of($article->content)->substr(1000, 10000) !!}</p>
+                                        <p>{!! \Illuminate\Support\Str::of($article->content)->substr(3000, 10000) !!}</p>
                                     </div>
                                 </div>
                             </article>

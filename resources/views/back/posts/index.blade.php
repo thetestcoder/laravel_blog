@@ -81,7 +81,7 @@
                                 <a href= "#" class="item" data-toggle="tooltip" data-placement="top" title="Send">
                                     <i class="zmdi zmdi-mail-send"></i>
                                 </a>
-                                <a href= "#" class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                <a href= "{{route('admin.posts.edit', $post->id)}}" class="item" data-toggle="tooltip" data-placement="top" title="Edit">
                                     <i class="zmdi zmdi-edit"></i>
                                 </a>
                                 <a href= "#"class="item" data-toggle="tooltip" data-placement="top" title="Delete">
@@ -93,6 +93,7 @@
                     <tr class="spacer"></tr>
                     </tbody>
                     @endforeach
+
                 </table>
             </div>
             <!-- END DATA TABLE -->

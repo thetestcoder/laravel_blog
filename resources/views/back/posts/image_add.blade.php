@@ -33,7 +33,7 @@
                                         <label for="file-multiple-input" class=" form-control-label">İçerik Görseli Seçiniz:</label>
                                     </div>
                                     <div class="col-12 col-md-9">
-                                            <input type="file" id="file-multiple-input" name="image" accept="image/*" multiple="multiple" class="form-control-file">
+                                            <input type="file" id="file-multiple-input" name="image" accept="image/*" multiple="multiple" class="form-control-file" required>
                                     </div>
                                 </div>
                                 <div class="card-footer">

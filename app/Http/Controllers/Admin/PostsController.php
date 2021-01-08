@@ -66,4 +66,29 @@ class PostsController extends Controller
             ->with('success','You have successfully file uplaod.')
             ->with('files',$fileNames);
     }
+
+    public function edit($id){
+        $post=Article::findOrFail($id);
+        $categories=Category::all();
+        return view('back.posts.edit', compact('categories', 'post'));;
+    }
+
+    public function update(Request $request, $id)
+    {
+        $post = Article::findOrFail($id);
+        $post->title=$request->input('text-input');
+        $post->category_id=$request->input('selectLg');
+        $post->content=$request->input('content');
+        $post->slug=Str::slug($request->input('text-input'));
+
+        if($request->hasFile('image')){
+            $imageName=Str::slug($request->input('text-input')).'.'.$request->image->extension();
+            $request->image->move(public_path('uploads'),$imageName);
+            $post->image='uploads/'.$imageName;
+        }
+
+
+        $post->save();
+        return redirect()->route('admin.posts.index');
+    }
 }
