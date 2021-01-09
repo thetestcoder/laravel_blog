@@ -9,7 +9,7 @@
         <div class="table-data__tool-left"></div>
         <div class="table-data__tool-right">
             <a  data-target="#addModal" data-toggle="modal" class="au-btn au-btn-icon au-btn--green au-btn--small add-click">
-                <i class="zmdi zmdi-plus"></i>add item</a>
+                <i class="zmdi zmdi-plus"></i>Kategori Ekle</a>
             <div class="rs-select2--dark rs-select2--sm rs-select2--dark2"></div>
         </div>
     </div>
@@ -44,16 +44,10 @@
                     <td class="desc">{{$category->articleCount()}}</td>
                     <td>
                         <div class="table-data-feature">
-                            <a href= "" class="item" data-toggle="tooltip" data-placement="top" title="Edit Gallery">
-                                <i class="zmdi zmdi-folder"></i>
-                            </a>
-                            <a href= "#" class="item" data-toggle="tooltip" data-placement="top" title="Send">
-                                <i class="zmdi zmdi-mail-send"></i>
-                            </a>
                             <a category-id="{{$category->id}}" class="item edit-click" data-toggle="tooltip" data-placement="top" title="Edit">
                                 <i class="zmdi zmdi-edit"></i>
                             </a>
-                            <a id="" class="item" data-toggle="tooltip" data-placement="top" title="Delete">
+                            <a category-id="{{$category->id}}" category-name="{{$category->name}}" category-count="{{$category->articleCount()}}" class="item remove-click" data-toggle="tooltip" data-placement="top" title="Delete">
                                 <i class="zmdi zmdi-delete"></i>
                             </a>
                         </div>
@@ -109,8 +103,8 @@
                             <input id="slug" type="text" class="form-control" name="slug">
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Save changes</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                            <button type="submit" class="btn btn-primary">Değişiklikleri Kaydet</button>
                         </div>
                     </form>
                 </div>
@@ -136,14 +130,41 @@
                             <input id="category" type="text" class="form-control" name="category">
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Save changes</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                            <button type="submit" class="btn btn-primary">Kategori Ekle</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Remove Modal -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Kategori Sil</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-danger" id="postAlert">
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <form method="post" action="{{route('admin.category.delete')}}">
+                        @csrf
+                        <input type="hidden" name="id" id="remove_id">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                        <button id="deleteButton" type="submit" class="btn btn-primary">Kategori Sil</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
 @endsection
 @section('css')
     <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
@@ -171,6 +192,30 @@
             });
         })
 
+        $(function() {
+            $('.remove-click').click(function (){
+                id = $(this)[0].getAttribute('category-id');
+                count = $(this)[0].getAttribute('category-count');
+                name = $(this)[0].getAttribute('category-name');
+                if(id==15){
+                    $('#postAlert').html(name+' kategorisi silinemez. Diğer silinen kategorilere ait gönderiler <strong> Genel </strong> kategorisine eklenecektir ');
+                    $('#body').show();
+                    $('#deleteButton').hide();
+                    $('#deleteModal').modal();
+                    return;
+                }
+
+                $('#deleteModal').show();
+                $('#remove_id').val(id);
+                $('#postAlert').html(name+ ' kategorisine ait post <strong>bulunmamaktadır</strong>. Silmek istediğine emin misin?');
+                $('#body').hide();
+                if(count>0){
+                    $('#postAlert').html(name+ ' kategorisine ait <strong>'+count+' adet </strong> post bulunmaktadır. Silmek istediğine emin misin?');
+                    $('#body').show();
+                }
+                $('#deleteModal').modal();
+            });
+        })
 
         $(document).on('click', '.create-modal', function (){
             $('#create').modal('show');

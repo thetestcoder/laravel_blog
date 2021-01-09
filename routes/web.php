@@ -38,6 +38,7 @@ Route::prefix('admin')->name('admin.')->middleware('Admin')->group(function (){
     Route::get('/categories', 'App\Http\Controllers\Admin\CategoryController@index')->name('category.index');
     Route::post('/categories/create', 'App\Http\Controllers\Admin\CategoryController@create')->name('category.create');
     Route::post('/categories/update','App\Http\Controllers\Admin\CategoryController@update')->name('category.update');
+    Route::post('/categories/delete','App\Http\Controllers\Admin\CategoryController@delete')->name('category.delete');
     Route::get('/categories/getData','App\Http\Controllers\Admin\CategoryController@getData')->name('category.getdata');
 
 });

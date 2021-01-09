@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Article;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use Illuminate\Support\Str;
@@ -36,6 +37,19 @@ class CategoryController extends Controller
         $category->name = $request->category;
         $category->slug = Str::slug($request->slug);
         $category->save();
+        return redirect()->back();
+    }
+
+    public function delete(Request $request){
+        $category=Category::findOrFail($request->id);
+        if($category->id==15){
+            return redirect()->back();
+        }
+        $count=$category->articleCount();
+        if($count>0){
+            Article::where('category_id', $category->id)->update(['category_id'=>15]);
+        }
+        $category->delete();
         return redirect()->back();
     }
 
