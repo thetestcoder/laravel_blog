@@ -38,7 +38,8 @@
 <script src="{{asset('back/')}}/js/main.js"></script>
 
 @yield('js')
-
+@toastr_js
+@toastr_render
 </body>
 </html>
 <!-- end document-->

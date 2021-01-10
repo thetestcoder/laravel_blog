@@ -42,12 +42,12 @@ class CategoryController extends Controller
 
     public function delete(Request $request){
         $category=Category::findOrFail($request->id);
-        if($category->id==15){
+        if($category->id==5){
             return redirect()->back();
         }
         $count=$category->articleCount();
         if($count>0){
-            Article::where('category_id', $category->id)->update(['category_id'=>15]);
+            Article::where('category_id', $category->id)->update(['category_id'=>5]);
         }
         $category->delete();
         return redirect()->back();

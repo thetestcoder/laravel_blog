@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Image;
 use Illuminate\Http\Request;
 
-use Illuminate\Support\Facades\Storage;
+
 use Illuminate\Support\Str;
 use App\Models\Article;
 use App\Models\Category;
@@ -44,10 +44,11 @@ class PostsController extends Controller
 
 
         $post->save();
+        toastr()->success('Başarılı.', 'Post oluşturma işlemi başarıyla tamamlandı.');
         return redirect()->route('admin.posts.index');
     }
 
-    public function multipleImageStore(Request $request)
+    public function multipleImageStore(Request $request): \Illuminate\Http\RedirectResponse
     {
 
         foreach($request->file('file') as $image)
@@ -70,7 +71,7 @@ class PostsController extends Controller
     public function edit($id){
         $post=Article::findOrFail($id);
         $categories=Category::all();
-        return view('back.posts.edit', compact('categories', 'post'));;
+        return view('back.posts.edit', compact('categories', 'post'));
     }
 
     public function update(Request $request, $id)
@@ -89,6 +90,18 @@ class PostsController extends Controller
 
 
         $post->save();
+        return redirect()->route('admin.posts.index');
+    }
+
+    public function switch(Request $request){
+        $post=Article::findOrFail($request->id);
+        $post->status=$request->status=="true" ? 1 : 0;
+        $post->save();
+    }
+
+    public function delete($id){
+        Article::find($id)->delete();
+        toastr()->success('Başarılı, Gönderi başarıyla silindi.');
         return redirect()->route('admin.posts.index');
     }
 }

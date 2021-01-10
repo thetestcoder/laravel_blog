@@ -197,10 +197,10 @@
                 id = $(this)[0].getAttribute('category-id');
                 count = $(this)[0].getAttribute('category-count');
                 name = $(this)[0].getAttribute('category-name');
-                if(id==15){
+                if(id==5){
                     $('#postAlert').html(name+' kategorisi silinemez. Diğer silinen kategorilere ait gönderiler <strong> Genel </strong> kategorisine eklenecektir ');
                     $('#body').show();
-                    $('#deleteButton').hide();
+                    $('#deleteButton').show();
                     $('#deleteModal').modal();
                     return;
                 }

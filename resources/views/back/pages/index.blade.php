@@ -1,10 +1,10 @@
 @extends('back.layouts.master')
-@section('title', 'POST PAGE')
+@section('title', 'page PAGE')
 @section('content')
     <br>
             <!-- DATA TABLE -->
-            <h3 class="title-5 m-b-35">All Posts</h3>
-            <h4 class="title-5 m-b-25">{{$posts->count()}} adet yazı listelendi.</h4>
+            <h3 class="title-5 m-b-35">All pages</h3>
+            <h4 class="title-5 m-b-25">{{$pages->count()}} adet yazı listelendi.</h4>
             <div class="table-data__tool">
                 <div class="table-data__tool-left">
                     <div class="rs-select2--light rs-select2--md">
@@ -27,8 +27,8 @@
                         <i class="zmdi zmdi-filter-list"></i>filters</button>
                 </div>
                 <div class="table-data__tool-right">
-                    <a href="{{route('admin.posts.create')}}" class="au-btn au-btn-icon au-btn--green au-btn--small">
-                        <i class="zmdi zmdi-plus"></i>add item</a>
+                    <a href="{{route('admin.pages.create')}}" class="au-btn au-btn-icon au-btn--green au-btn--small">
+                        <i class="zmdi zmdi-plus"></i>Sayfa Oluştur</a>
                     <div class="rs-select2--dark rs-select2--sm rs-select2--dark2">
                         <select class="js-select2" name="type">
                             <option selected="selected">Export</option>
@@ -51,14 +51,11 @@
                         </th>
                         <th>Title</th>
                         <th>Görsel</th>
-                        <th>Kategori</th>
-                        <th>Oluşturulma Tarihi</th>
-                        <th>Hit/Tıklanma</th>
                         <th>Status / Durum</th>
                         <th>Islemler</th>
                     </tr>
                     </thead>
-                    @foreach($posts as $post)
+                    @foreach($pages as $page)
                     <tbody>
                     <tr class="tr-shadow">
                         <td>
@@ -67,29 +64,27 @@
                                 <span class="au-checkmark"></span>
                             </label>
                         </td>
-                        <td>{{$post->title}}</td>
+                        <td>{{$page->title}}</td>
                         <td>
-                            <img src="{{asset($post->image)}}" width="400" height="400">
+                            <img src="{{asset($page->image)}}" width="400" height="400">
                         </td>
-                        <td class="desc">{{$post->getCategory->name}}</td>
-                        <td>{{$post->created_at->diffForHumans()}}</td>
-                        <td>{{$post->hit}}</td>
+                        <td class="desc"></td>
                         <td>
-                            <input class="switch" post-id="{{$post->id}}" type="checkbox" data-on="Yayında" data-off="Yayında Değil" data-onstyle="success" data-offstyle="danger" @if($post->status==1) checked
+                            <input class="switch" page-id="{{$page->id}}" type="checkbox" data-on="Yayında" data-off="Yayında Değil" data-onstyle="success" data-offstyle="danger" @if($page->status==1) checked
                                    @endif data-toggle="toggle">
                         </td>
                         <td>
                             <div class="table-data-feature">
-                                <a href= "{{route('admin.admin_image_add', ['post_id'=>$post->id])}}" class="item" data-toggle="tooltip" data-placement="top" title="Edit Gallery">
-                                    <i class="zmdi zmdi-folder"></i>
+                                <a href= "{{route('page', $page->slug)}}" class="item" data-toggle="tooltip" data-placement="top" title="Görüntüle">
+                                    <i class="zmdi fa-desktop"></i>
+                                </a>
+                                <a href= "{{route('admin.pages.update', $page->id)}}" class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                    <i class="zmdi zmdi-edit"></i>
                                 </a>
                                 <a href= "#" class="item" data-toggle="tooltip" data-placement="top" title="Send">
                                     <i class="zmdi zmdi-mail-send"></i>
                                 </a>
-                                <a href= "{{route('admin.posts.edit', $post->id)}}" class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                    <i class="zmdi zmdi-edit"></i>
-                                </a>
-                                <a post-id="{{$post->id}}" post-title="{{$post->title}}" class="item remove-click" data-toggle="tooltip" data-placement="top" title="Delete">
+                                <a page-id="{{$page->id}}" page-title="{{$page->title}}" class="item remove-click" data-toggle="tooltip" data-placement="top" title="Delete">
                                     <i class="zmdi zmdi-delete"></i>
                                 </a>
                             </div>
@@ -105,22 +100,22 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Kategori Sil</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Sayfayı Sil</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div class="alert alert-danger" id="postAlert">
+                    <div class="alert alert-danger" id="pageAlert">
 
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <form method="post" action="{{route('admin.posts.delete', $post->id)}}">
+                    <form method="post" action="{{route('admin.pages.delete', $page->id)}}">
                         @csrf
                         <input type="hidden" name="id" id="remove_id">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
-                        <button id="deleteButton" type="submit" class="btn btn-primary">Kategori Sil</button>
+                        <button id="deleteButton" type="submit" class="btn btn-primary">Sayfa Sil</button>
                     </form>
                 </div>
             </div>
@@ -137,19 +132,19 @@
     <script>
         $(function() {
             $('.switch').change(function() {
-                id = $(this)[0].getAttribute('post-id');
+                id = $(this)[0].getAttribute('page-id');
                 status=$(this).prop('checked');
-                $.get("{{route('admin.switch')}}", {id:id,status:status},  function(data, status) {});
+                $.get("{{route('admin.pages.switch')}}", {id:id,status:status},  function(data, status) {});
             })
         })
 
         $(function() {
             $('.remove-click').click(function (){
-                id = $(this)[0].getAttribute('post-id');
-                name = $(this)[0].getAttribute('post-title');
+                id = $(this)[0].getAttribute('page-id');
+                name = $(this)[0].getAttribute('page-title');
                 $('#deleteModal').show();
                 $('#remove_id').val(id);
-                $('#postAlert').html(name+ 'gönderisini silmek istediğine emin misin?');
+                $('#pageAlert').html(name+ ' sayfasını silmek istediğine emin misin?');
                 $('#body').hide();
                 $('#deleteModal').modal();
             });

@@ -17,15 +17,10 @@ class Pages extends Migration
             $table->id();
             $table->string('title');
             $table->string('image');
-            $table->string('image2');
-            $table->string('bg');
             $table->longText('hakkimda');
-            $table->longText('hedef1');
-            $table->longText('uzmanlik');
-            $table->longText('egitim');
-            $table->longText('egitimContent');
             $table->string('slug');
             $table->integer('order');
+            $table->integer('status')->default(1);
             $table->timestamps();
         });
     }

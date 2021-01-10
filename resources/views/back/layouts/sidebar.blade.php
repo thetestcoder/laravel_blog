@@ -33,6 +33,7 @@
 
     <!-- Main CSS-->
     <link href="{{asset('back/')}}/css/theme.css" rel="stylesheet" media="all">
+    @toastr_css
     @yield('css')
 </head>
 
@@ -81,8 +82,8 @@
                             <i class="fas fa-fw fa-list"></i>Kategoriler</a>
                     </li>
                     <li>
-                        <a href="form.html">
-                            <i class="far fa-check-square"></i>Forms</a>
+                        <a href="{{route('admin.pages.index')}}">
+                            <i class="fas fa-fw fa-folder"></i>Eklenebilir Sayfalar</a>
                     </li>
                     <li>
                         <a href="calendar.html">
