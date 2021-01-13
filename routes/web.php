@@ -50,6 +50,9 @@ Route::prefix('admin')->name('admin.')->middleware('Admin')->group(function (){
     Route::post('/pages/update/{id}','App\Http\Controllers\Admin\PageController@updatepost')->name('pages.update.post');
     Route::get('/pages/switch','App\Http\Controllers\Admin\PageController@switch')->name('pages.switch');
     Route::post('/pages/delete/{id}','App\Http\Controllers\Admin\PageController@delete')->name('pages.delete');
+    // Settings
+    Route::get('/settings','App\Http\Controllers\Admin\SettingsController@index')->name('settings.index');
+    Route::post('settings/update','App\Http\Controllers\Admin\SettingsController@update')->name('settings.update');
 
 });
 
