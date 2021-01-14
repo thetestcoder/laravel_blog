@@ -236,20 +236,17 @@
                         </div>
 
                         <div class="akea-main-menu-left-wrap akea-main-menu-left-social clearfix akea-item-pdlr akea-navigation-top">
-                            <a href=# target=_blank class=akea-top-bar-social-icon title=facebook>
+                            <a href={{$setting->twitter}} target=_blank class=akea-top-bar-social-icon title=twitter>
                                 <i class="fa fa-twitter" ></i>
                             </a>
-                            <a href=# target=_blank class=akea-top-bar-social-icon title=google-plus>
+                            <a href="{{$setting->github}}" target=_blank class=akea-top-bar-social-icon title=github>
                                 <i class="fa fa-github" ></i>
                             </a>
-                            <a href=# target=_blank class=akea-top-bar-social-icon title=pinterest>
+                            <a href={{$setting->linkedin}} target=_blank class=akea-top-bar-social-icon title=linkedin>
                                 <i class="fa fa-linkedin" ></i>
                             </a>
-                            <a href=# target=_blank class=akea-top-bar-social-icon title=twitter>
+                            <a href={{$setting->medium}} target=_blank class=akea-top-bar-social-icon title=medium>
                                 <i class="fa fa-medium" ></i>
-                            </a>
-                            <a href= target=_blank class=akea-top-bar-social-icon title=vimeo>
-                                <i class="fa fa-google-drive" ></i>
                             </a>
                         </div>
                     </div>

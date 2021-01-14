@@ -80,11 +80,11 @@
 @endsection
 @section('js')
     <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.js"></script>
-    <script>
+    <script type="text/javascript">
         $(document).ready(function() {
             $('#editor').summernote(
                 {
-                    'height':300
+                    'height':300,
                 }
             );
         });

@@ -42,7 +42,7 @@
                                         <div class=gdlr-core-pbf-element>
                                             <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" id="div_aff0_9">
                                                 <div class=gdlr-core-text-box-item-content id="div_aff0_10">
-                                                    <p>{{$page->hakkimda}}</p>
+                                                    <p>{!! \Illuminate\Support\Str::limit(html_entity_decode($page->hakkimda), 900)  !!}</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -54,9 +54,6 @@
                                                     </li>
                                                 </ul>
                                             </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"><a class="gdlr-core-button  gdlr-core-button-gradient gdlr-core-button-no-border" href=# id="a_aff0_0"><span class=gdlr-core-content >Read More</span></a></div>
                                         </div>
                                     </div>
                                 </div>
