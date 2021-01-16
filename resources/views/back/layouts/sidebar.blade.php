@@ -45,7 +45,7 @@
             <div class="container-fluid">
                 <div class="header-mobile-inner">
                     <a class="logo" href="{{asset('back/')}}/index.html">
-                        <img src="{{asset('back/')}}/images/icon/logo.png" alt="CoolAdmin" />
+                        <img src="{{asset($setting->logo)}}" alt="Umutlion logo" />
                     </a>
                     <button class="hamburger hamburger--slider" type="button">
                             <span class="hamburger-box">
@@ -63,7 +63,7 @@
     <aside class="menu-sidebar d-none d-lg-block">
         <div class="logo">
             <a href="{{route('admin.dashboard')}}">
-                <img src="{{asset('back/')}}/images/icon/png1.png" alt="Cool Admin" />
+                <img src="{{asset($setting->logo)}}" alt="Umutlion Logo" />
             </a>
         </div>
         <div class="menu-sidebar__content js-scrollbar1">

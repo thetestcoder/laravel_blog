@@ -19,7 +19,7 @@ class PageController extends Controller
         return view('back.pages.create');
     }
 
-    public function createpage(Request $request){
+    public function createpost(Request $request){
         $request->validate([
             'title'=>'min:3',
             'image'=>'required|image|mimes:jpeg,png,jpg|max:2048'

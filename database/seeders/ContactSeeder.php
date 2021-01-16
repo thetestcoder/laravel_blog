@@ -15,12 +15,12 @@ class ContactSeeder extends Seeder
      */
     public function run()
     {
-            DB::table('contacts')->insert([
-                'name'=>'What is Lorem Ipsum?',
-                'email'=>'umutcaayli@gmail.com',
-                'message'=>'LOrem',
-                'created_at'=>now(),
-                'updated_at'=>now(),
-            ]);
+        DB::table('contacts')->insert([
+            'name' => 'What is Lorem Ipsum?',
+            'email' => 'umutcaayli@gmail.com',
+            'message' => 'LOrem',
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
     }
 }

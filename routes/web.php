@@ -22,7 +22,7 @@ Route::post('login', 'App\Http\Controllers\Admin\HomeController@login_post')->na
 
 
 Route::prefix('admin')->name('admin.')->middleware('Admin')->group(function (){
-   // posts
+    // posts
     Route::get('/', 'App\Http\Controllers\Admin\HomeController@index')->name('dashboard');
     Route::resource('posts', 'App\Http\Controllers\Admin\PostsController');
     Route::get('logout', 'App\Http\Controllers\Admin\HomeController@logout')->name('auth.logout');
@@ -65,5 +65,3 @@ Route::get('/{category}/{slug}','App\Http\Controllers\Front\HomepageController@s
 Route::get('/contact','App\Http\Controllers\Front\HomepageController@contact')->name('contact');
 Route::post('/contact','App\Http\Controllers\Front\HomepageController@postcontact')->name('post.contact');
 Route::get('/{sayfa}','App\Http\Controllers\Front\HomepageController@page')->name('page');
-
-

@@ -6180,19 +6180,19 @@ html.mm-opening.akea-mmenu-right .akea-mobile-header {
 }
 
 @media only screen and (max-width: 767px) {
-	.gdlr-core-column-10, 
-	.gdlr-core-column-12, 
-	.gdlr-core-column-15, 
+	.gdlr-core-column-10,
+	.gdlr-core-column-12,
+	.gdlr-core-column-15,
 	.gdlr-core-column-20,
-	.gdlr-core-column-24, 
-	.gdlr-core-column-30, 
-	.gdlr-core-column-36, 
+	.gdlr-core-column-24,
+	.gdlr-core-column-30,
+	.gdlr-core-column-36,
 	.gdlr-core-column-40,
-	.gdlr-core-column-45, 
-	.gdlr-core-column-48, 
-	.gdlr-core-column-50, 
-	.gdlr-core-column-60 { 
-		width: 100%; 
+	.gdlr-core-column-45,
+	.gdlr-core-column-48,
+	.gdlr-core-column-50,
+	.gdlr-core-column-60 {
+		width: 100%;
 	}
 }
 
@@ -6327,7 +6327,7 @@ html.mm-opening.akea-mmenu-right .akea-mobile-header {
 }
 
 
-	
+
 .filter ul {
 	margin: 0 auto 70px;
 	display: table;
@@ -6361,14 +6361,14 @@ html.mm-opening.akea-mmenu-right .akea-mobile-header {
 
 
 
-.submit-button { 
-	font-size: 15px; 
-	font-weight: bold; 
-	letter-spacing: 0.8px; 
-	padding: 15px; 
+.submit-button {
+	font-size: 15px;
+	font-weight: bold;
+	letter-spacing: 0.8px;
+	padding: 15px;
 	width: 100%;
-	display: block; -webkit-appearance: none; 
-	background-color:#333; 
+	display: block; -webkit-appearance: none;
+	background-color:#333;
 	border: 0;
 	color: #fff;
 	font-style: normal !important;
@@ -6525,8 +6525,8 @@ html.mm-opening.akea-mmenu-right .akea-mobile-header {
 #h3_aff0_4{font-size: 19px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;}
 #div_aff0_20{font-size: 16px ;text-transform: none ;}
 #div_aff0_21{padding: 130px 0px 110px 0px;}
-#div_aff0_22{background-color: #232323 ;}
-#div_aff0_23{opacity: 0.20 ;background-image: url(../upload/mark-basarab-122141-unsplash.jpg) ;background-size: cover ;background-position: center ;background-attachment: fixed ;}
+#div_aff0_22{background-color: #232323;  background-image: url('https://cdn.hipwallpaper.com/m/92/87/KjreNx.jpg') ;}
+#div_aff0_23{opacity: 0.20 ;background-image: url('https://c4.wallpaperflare.com/wallpaper/14/781/123/2000x1333-px-grass-japan-ladders-mountains-tokyo-yellow-flowers-people-leg-hd-art-wallpaper-preview.jpg') ;background-size: cover ;background-position: center ;background-attachment: fixed ;}
 #div_aff0_24{max-width: 1280px ;}
 #div_aff0_25{padding-bottom: 0px ;}
 #div_aff0_26{font-size: 41px ;font-weight: 700 ;}
@@ -6591,7 +6591,7 @@ html.mm-opening.akea-mmenu-right .akea-mobile-header {
 #a_aff0_21{font-size: 15px ;color: #ffffff ;margin-left: 25px ;}
 #a_aff0_22{font-size: 15px ;color: #ffffff ;margin-left: 25px ;}
 #div_e6a9_0{padding: 140px 0px 100px 0px;}
-#div_e6a9_1{background-image: url(../upload/image-bg-1.jpg) ;background-size: cover ;background-position: center ;}
+#div_e6a9_1{background-image: url('../upload/image-bg-1.jpg') ;background-size: cover ;background-position: center ;}
 #h3_e6a9_0{font-size: 38px ;font-weight: 300 ;letter-spacing: 0px ;text-transform: none ;color: #ffffff ;}
 #div_e6a9_2{max-width: 140px ;}
 #div_e6a9_3{border-bottom-width: 3px ;}

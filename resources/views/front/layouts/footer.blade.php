@@ -25,24 +25,21 @@
             </div>
             <div class="akea-footer-column akea-item-pdlr akea-column-20">
                 <div id=text-3 class="widget widget_text akea-widget">
-                    <h3 class="akea-widget-title"><span class=akea-widget-head-text>Follow Us</span><span class=akea-widget-head-divider></span></h3><span class=clear></span>
+                    <h3 class="akea-widget-title"><span class=akea-widget-head-text>Bizi takip edin</span><span class=akea-widget-head-divider></span></h3><span class=clear></span>
 
                     <div class=textwidget>
                         <div class="gdlr-core-social-network-item gdlr-core-item-pdb  gdlr-core-none-align" id="div_2207_16">
-                            <a href=# target=_blank class=gdlr-core-social-network-icon title=facebook id="a_2207_31" rel="noopener noreferrer">
-                                <i class="fa fa-facebook" ></i>
-                            </a>
-                            <a href=# target=_blank class=gdlr-core-social-network-icon title=pinterest id="a_2207_32" rel="noopener noreferrer">
-                                <i class="fa fa-pinterest-p" ></i>
-                            </a>
-                            <a href=# target=_blank class=gdlr-core-social-network-icon title=skype id="a_2207_33" rel="noopener noreferrer">
-                                <i class="fa fa-skype" ></i>
-                            </a>
-                            <a href=# target=_blank class=gdlr-core-social-network-icon title=twitter id="a_2207_34" rel="noopener noreferrer">
+                            <a href={{$setting->twitter}} target=_blank class=gdlr-core-social-network-icon title=twitter id="a_2207_31" rel="noopener noreferrer">
                                 <i class="fa fa-twitter" ></i>
                             </a>
-                            <a href=# target=_blank class=gdlr-core-social-network-icon title=instagram id="a_2207_35" rel="noopener noreferrer">
-                                <i class="fa fa-instagram" ></i>
+                            <a href={{$setting->github}} target=_blank class=gdlr-core-social-network-icon title=github id="a_2207_32" rel="noopener noreferrer">
+                                <i class="fa fa-github" ></i>
+                            </a>
+                            <a href={{$setting->linkedin}} target=_blank class=gdlr-core-social-network-icon title=linkedin id="a_2207_33" rel="noopener noreferrer">
+                                <i class="fa fa-linkedin" ></i>
+                            </a>
+                            <a href={{$setting->medium}} target=_blank class=gdlr-core-social-network-icon title=medium id="a_2207_34" rel="noopener noreferrer">
+                                <i class="fa fa-medium" ></i>
                             </a>
                         </div>
                     </div>

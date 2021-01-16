@@ -46,10 +46,16 @@
                         <div class="gdlr-core-pbf-sidebar-right gdlr-core-column-extend-right  akea-sidebar-area gdlr-core-column-20 gdlr-core-pbf-sidebar-padding  gdlr-core-line-height" data-skin="Blog List" id="div_2207_9">
                             <div class="gdlr-core-sidebar-item gdlr-core-item-pdlr">
                                 <div id=text-4 class="widget widget_text akea-widget">
-                                    <h3 class="akea-widget-title"><span class=akea-widget-head-text>About Me</span><span class=akea-widget-head-divider></span></h3><span class=clear></span>
+                                    <h3 class="akea-widget-title"><span class=akea-widget-head-text>Hakkımızda</span><span class=akea-widget-head-divider></span></h3><span class=clear></span>
                                     <div class=textwidget>
-                                        <p><img class="alignnone size-full wp-image-6650" src=upload/about-image.png alt width=120>
-                                            <br> Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated.</p> <a class="gdlr-core-button gdlr-core-button-shortcode  gdlr-core-button-transparent gdlr-core-button-with-border" href=# target=_blank id="a_2207_10" rel="noopener noreferrer"><span class=gdlr-core-content >more about me</span><i class="gdlr-core-pos-right arrow_right"  ></i></a></div>
+
+                                            <p><img class="alignnone size-full wp-image-6650" src={{asset('front/')}}/upload/about-image.png alt width=120>
+                                                @foreach($pages as $page)
+                                                @if($page->id==1)
+                                                <br>{{\Illuminate\Support\Str::limit($page->hakkimda, 200)}}</p> <a class="gdlr-core-button gdlr-core-button-shortcode  gdlr-core-button-transparent gdlr-core-button-with-border" href="{{route('page', $page->slug, ['id' => '1'])}}" target=_blank id="a_2207_10" rel="noopener noreferrer"><span class=gdlr-core-content >Hakkımızda daha fazlası için </span><i class="gdlr-core-pos-right arrow_right"  ></i></a></div>
+                                                 @endif
+                                             @endforeach()
+
                                 </div>
                                 <div id=text-7 class="widget widget_text akea-widget">
                                     <div class=textwidget>

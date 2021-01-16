@@ -148,10 +148,15 @@
                                         </div>
                                     </div>
                                 </li>
-                                @foreach($pages as $page)
-                                <li class="menu-item akea-normal-menu"><a href={{route('page', $page->slug, ['id' => '2'])}}>{{$page->title}}</a></li>
-                                @endforeach()
-                                    <li class="menu-item akea-normal-menu"><a href={{route('contact')}}>İletişim</a></li>
+                                <li class="menu-item menu-item-has-children akea-normal-menu"><a href=# class=sf-with-ul-pre>Sayfalar</a>
+                                    <ul class=sub-menu>
+                                        @foreach($pages as $page)
+                                            <li class="menu-item akea-normal-menu"><a href={{route('page', $page->slug, ['id' => '1'])}}>{{$page->title}}</a></li>
+                                        @endforeach()
+                                    </ul>
+                                </li>
+
+                                <li class="menu-item akea-normal-menu"><a href={{route('contact')}}>İletişim</a></li>
                             </ul>
                             <div class=akea-navigation-slide-bar id=akea-navigation-slide-bar></div>
                         </div>
@@ -253,5 +258,3 @@
                 </div>
             </div>
         </header>
-    </div>
-</div>
