@@ -23,9 +23,8 @@
                                             <div class=akea-single-article-head-right>
                                                 <h1 class="akea-single-article-title">{{$article->title}}</h1>
                                                 <div class=akea-blog-info-wrapper>
-                                                    <div class="akea-blog-info akea-blog-info-font akea-blog-info-author vcard author post-author "><img alt src='upload/avatar.jpeg' class='avatar avatar-50 photo' height=50 width=50><span class=fn><a href=# title="Posts by Janet Jones" rel=author>Janet Jones</a></span></div>
-                                                    <div class="akea-blog-info akea-blog-info-font akea-blog-info-category "><a href=# rel=tag>Food</a></div>
-                                                    <div class="akea-blog-info akea-blog-info-font akea-blog-info-tag "><a href=# rel=tag>Food</a></div>
+                                                    <div class="akea-blog-info akea-blog-info-font akea-blog-info-category "><a href=# rel=tag>{{$article->getCategory->name}}</a></div>
+                                                    <div class="akea-blog-info akea-blog-info-font akea-blog-info-tag "><a href=# rel=tag>{{$article->title}}</a></div>
                                                     <div class="akea-blog-info akea-blog-info-font akea-blog-info-comment-number "><span class=akea-head><i class=icon_comment_alt ></i></span>0</div>
                                                 </div>
                                             </div>
@@ -35,7 +34,7 @@
                                     <div class=akea-single-article-content>
                                         <div class=akea-breadcrumbs>
                                             <div class=akea-breadcrumbs-container>
-                                                <div class=akea-breadcrumbs-item> <span property=itemListElement typeof=ListItem><a property=item typeof=WebPage title="Go to Akea." href="{{asset('/')}}" class=home><span property=name>Home</span></a>
+                                                <div class=akea-breadcrumbs-item> <span property=itemListElement typeof=ListItem><a property=item typeof=WebPage title="Go to Akea." href="{{asset('/')}}" class=home><span property=name>Anasayfa</span></a>
                                                         <meta property=position content=1>
                                                         </span>&#183;<span property=itemListElement typeof=ListItem><a property=item typeof=WebPage title="Go to the Food category archives." href="#" class="taxonomy category"><span property=name>{{$article->getCategory->name}}</span></a>
                                                         <meta property=position content=2>

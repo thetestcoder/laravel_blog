@@ -24,9 +24,54 @@
     <!-- favicon -->
     <link rel="shortcut icon" type="image/png" href="{{asset($setting->favicon)}}">
 
+    <!-- login -->
+    <link href="{{asset('back/')}}/css/font-face.css" rel="stylesheet" media="all">
+    <link href="{{asset('back/')}}/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="{{asset('back/')}}/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="{{asset('back/')}}/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="{{asset('back/')}}/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="{{asset('back/')}}/vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="{{asset('back/')}}/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="{{asset('back/')}}/vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="{{asset('back/')}}/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="{{asset('back/')}}/vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="{{asset('back/')}}/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="{{asset('back/')}}/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="{{asset('back/')}}/css/theme.css" rel="stylesheet" media="all">
+
+    <script src="{{asset('back/')}}/vendor/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="{{asset('back/')}}/vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="{{asset('back/')}}/vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="{{asset('back/')}}/vendor/slick/slick.min.js">
+    </script>
+    <script src="{{asset('back/')}}/vendor/wow/wow.min.js"></script>
+    <script src="{{asset('back/')}}/vendor/animsition/animsition.min.js"></script>
+    <script src="{{asset('back/')}}/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    </script>
+    <script src="{{asset('back/')}}/vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="{{asset('back/')}}/vendor/counter-up/jquery.counterup.min.js">
+    </script>
+    <script src="{{asset('back/')}}/vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="{{asset('back/')}}/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="{{asset('back/')}}/vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="{{asset('back/')}}/vendor/select2/select2.min.js">
+    </script>
+
+    <!-- Main JS-->
+    <script src="{{asset('back/')}}/js/main.js"></script>
+
 </head>
 
 <body class="home page-template-default page page-id-2039 gdlr-core-body woocommerce-no-js akea-body akea-body-front akea-full  akea-with-sticky-navigation  akea-blockquote-style-1 gdlr-core-link-to-lightbox" data-home-url=index.html>
+
 <div class=akea-mobile-header-wrap>
     <div class="akea-mobile-header akea-header-background akea-style-slide akea-sticky-mobile-navigation " id=akea-mobile-header>
         <div class="akea-mobile-header-container akea-container clearfix">
@@ -35,6 +80,7 @@
                     <a class href=# ><img src=upload/logo-2-1.png alt width=140 height=33 title=logo-2></a>
                 </div>
             </div>
+
             <div class=akea-mobile-menu-right>
                 <div class=akea-main-menu-search id=akea-mobile-top-search><i class="fa fa-search"></i></div>
                 <div class=akea-top-search-wrap>
@@ -120,7 +166,7 @@
     </div>
 </div>
 <div class="akea-body-outer-wrapper ">
-    <div class="akea-body-wrapper clearfix  akea-with-frame">
+                    <div class="akea-body-wrapper clearfix  akea-with-frame">
         <header class="akea-header-wrap akea-header-style-plain  akea-style-splitted-menu akea-sticky-navigation akea-style-slide" data-navigation-offset=75px>
             <div class=akea-header-background></div>
             <div class="akea-header-container  akea-container">
@@ -154,6 +200,7 @@
                                             <li class="menu-item akea-normal-menu"><a href={{route('page', $page->slug, ['id' => '1'])}}>{{$page->title}}</a></li>
                                         @endforeach()
                                     </ul>
+
                                 </li>
 
                                 <li class="menu-item akea-normal-menu"><a href={{route('contact')}}>İletişim</a></li>
@@ -165,21 +212,18 @@
                                 <div class="akea-overlay-menu-content akea-navigation-font">
                                     <div class=akea-overlay-menu-close></div>
                                     <div class=akea-overlay-menu-row>
+
                                         <div class=akea-overlay-menu-cell>
+
                                             <ul id=menu-main-navigation-2 class=menu>
                                                 <li class="menu-item menu-item-home current-menu-item"><a href=index.html aria-current=page>Home</a>
                                                     <ul class=sub-menu>
                                                         <li class="menu-item menu-item-home current-menu-item "><a href=index.html aria-current=page>Homepage</a></li></ul>
                                                 </li>
-                                                <li class="menu-item menu-item-has-children"><a href=#>Pages</a>
+                                                <li class="menu-item menu-item-has-children"><a href=#>Giriş</a>
                                                     <ul class=sub-menu>
-                                                        <li class="menu-item"><a href=contact.html>Contact</a></li>
-                                                        <li class="menu-item"><a href=author.html>Author</a></li>
-                                                        <li class="menu-item"><a href=gallery.html>Gallery</a></li>
-                                                        <li class="menu-item"><a href=price-table.html>Price Table</a></li>
-                                                        <li class="menu-item"><a href=maintenance.html>Maintenance</a></li>
-                                                        <li class="menu-item"><a href=coming-soon.html>Coming Soon</a></li>
-                                                        <li class="menu-item"><a href=404.html>404 Page</a></li>
+                                                        <li class="menu-item"><a href=contact.html>Giriş Yap</a></li>
+                                                        <li class="menu-item"><a href=author.html>Kayıt Ol</a></li>
                                                     </ul>
                                                 </li>
                                                 <li class="menu-item menu-item-has-children"><a href=#>Category</a>
@@ -189,33 +233,6 @@
                                                         <li class="menu-item"><a href=fashion.html>Fashion</a></li>
                                                         <li class="menu-item"><a href=food.html>Food</a></li>
                                                         <li class="menu-item"><a href=technology.html>Technology</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="menu-item menu-item-has-children"><a href=blog-full-right-sidebar-with-frame.html>Layout</a>
-                                                    <ul class=sub-menu>
-                                                        <li class="menu-item"><a href=gutenberg-post-ex-1.html>Gutenberg Single Post</a></li>
-                                                        <li class="menu-item"><a href=9-most-awesome-blue-lake-with-snow-mountain.html>Single Post</a></li>
-                                                        <li class="menu-item menu-item-has-children"><a href=blog-full-no-sidebar.html>Blog Full</a>
-                                                            <ul class=sub-menu>
-                                                                <li class="menu-item"><a href=blog-full-no-sidebar.html>Blog Full No Sidebar</a></li>
-                                                                <li class="menu-item"><a href=blog-full-no-sidebar-with-post-format.html>Blog Full No Sidebar With Post Format</a></li>
-                                                                <li class="menu-item"><a href=blog-full-right-sidebar-with-frame.html>Blog Full Right Sidebar With Frame</a></li>
-                                                                <li class="menu-item"><a href=blog-full-right-sidebar.html>Blog Full Right Sidebar</a></li>
-                                                            </ul>
-                                                        </li>
-                                                        <li class="menu-item menu-item-has-children"><a href=blog-grid-overlay-no-space.html>Blog Grid Overlay</a>
-                                                            <ul class=sub-menu>
-                                                                <li class="menu-item"><a href=blog-grid-overlay.html>Blog Grid Overlay</a></li>
-                                                                <li class="menu-item"><a href=blog-grid-overlay-no-space.html>Blog Grid Overlay No Space</a></li>
-                                                            </ul>
-                                                        </li>
-                                                        <li class="menu-item menu-item-has-children"><a href=blog-columns-with-frame.html>Blog Columns</a>
-                                                            <ul class=sub-menu>
-                                                                <li class="menu-item"><a href=blog-columns-with-frame.html>Blog Columns With Frame</a></li>
-                                                                <li class="menu-item"><a href=blog-columns.html>Blog Columns</a></li>
-                                                                <li class="menu-item"><a href=blog-columns-with-frame-post-format.html>Blog Columns With Post Format</a></li>
-                                                            </ul>
-                                                        </li>
                                                     </ul>
                                                 </li>
                                                 <li class="menu-item"><a href=about-us.html>About</a></li>

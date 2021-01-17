@@ -44,14 +44,42 @@
                             </div>
                         </div>
                         <div class="gdlr-core-pbf-sidebar-right gdlr-core-column-extend-right  akea-sidebar-area gdlr-core-column-20 gdlr-core-pbf-sidebar-padding  gdlr-core-line-height" data-skin="Blog List" id="div_2207_9">
+                            <div class="gdlr-core-widget-box-shortcode  gdlr-core-center-align" id="div_2207_10">
+                                <div class="card-header" style="width: 18rem;">
+                                    <img class="rounded-circle mx-lg-0 d-block" src="https://external-preview.redd.it/T7OUZIcZUBlW-8rR1MPsyQBl1eoiv7qxr_4ExLcUGh4.jpg?auto=webp&s=382dc80929cd45677fe952fe1f27046b800c2982" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">User name surname</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <div class="akea-main-menu-left-wrap akea-main-menu-left-social clearfix akea-item-pdlr akea-navigation-top">
+                                            <a href={{$setting->twitter}} target=_blank class=akea-top-bar-social-icon title=twitter>
+                                                <i class="fa fa-twitter" ></i>
+                                            </a>
+                                            <a href="{{$setting->github}}" target=_blank class=akea-top-bar-social-icon title=github>
+                                                <i class="fa fa-github" ></i>
+                                            </a>
+                                            <a href={{$setting->linkedin}} target=_blank class=akea-top-bar-social-icon title=linkedin>
+                                                <i class="fa fa-linkedin" ></i>
+                                            </a>
+                                            <a href={{$setting->medium}} target=_blank class=akea-top-bar-social-icon title=medium>
+                                                <i class="fa fa-medium" ></i>
+                                            </a>
+                                        </div>
+                                        <br>
+                                            <div class="button-input">
+                                                <a href="{{route('myprofile')}}" style="color: black" class="btn btn-outline-success">Profili Gör</a> <a style="color: black" class="btn btn-outline-danger">Çıkış</a>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="gdlr-core-sidebar-item gdlr-core-item-pdlr">
                                 <div id=text-4 class="widget widget_text akea-widget">
                                     <h3 class="akea-widget-title"><span class=akea-widget-head-text>Hakkımızda</span><span class=akea-widget-head-divider></span></h3><span class=clear></span>
                                     <div class=textwidget>
 
-                                            <p><img class="alignnone size-full wp-image-6650" src={{asset('front/')}}/upload/about-image.png alt width=120>
+
                                                 @foreach($pages as $page)
                                                 @if($page->id==1)
+                                                <p><img class="alignnone size-full wp-image-6650" src="{{$page->image}}" alt width=500>
                                                 <br>{{\Illuminate\Support\Str::limit($page->hakkimda, 200)}}</p> <a class="gdlr-core-button gdlr-core-button-shortcode  gdlr-core-button-transparent gdlr-core-button-with-border" href="{{route('page', $page->slug, ['id' => '1'])}}" target=_blank id="a_2207_10" rel="noopener noreferrer"><span class=gdlr-core-content >Hakkımızda daha fazlası için </span><i class="gdlr-core-pos-right arrow_right"  ></i></a></div>
                                                  @endif
                                              @endforeach()

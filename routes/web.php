@@ -55,9 +55,14 @@ Route::prefix('admin')->name('admin.')->middleware('Admin')->group(function (){
     Route::post('settings/update','App\Http\Controllers\Admin\SettingsController@update')->name('settings.update');
 
 });
-
-
 // User View
+
+Route::middleware('auth')->prefix('myuser')->namespace('myuser')->group( function (){
+    Route::get('/', [\App\Http\Controllers\Front\UserController::class, 'index'])->name('myprofile');
+});
+
+
+// Frontend View
 Route::get('/','App\Http\Controllers\Front\HomepageController@index')->name('homepage');
 Route::get('page', 'App\Http\Controllers\Front\HomepageController@index');
 Route::get('/category/{category}','App\Http\Controllers\Front\HomepageController@category')->name('category');
@@ -65,3 +70,8 @@ Route::get('/{category}/{slug}','App\Http\Controllers\Front\HomepageController@s
 Route::get('/contact','App\Http\Controllers\Front\HomepageController@contact')->name('contact');
 Route::post('/contact','App\Http\Controllers\Front\HomepageController@postcontact')->name('post.contact');
 Route::get('/{sayfa}','App\Http\Controllers\Front\HomepageController@page')->name('page');
+
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
