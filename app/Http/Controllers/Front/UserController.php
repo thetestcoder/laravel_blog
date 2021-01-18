@@ -7,6 +7,10 @@ use App\Models\Category;
 use App\Models\Page;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
+use App\Models\Admin;
+
 
 class UserController extends Controller
 {
@@ -89,5 +93,13 @@ class UserController extends Controller
     public function destroy(User $user)
     {
         //
+    }
+
+    public function login_post(Request $request){
+        if(Auth::attempt(['email'=>$request->email, 'password'=>$request->password])){
+            toastr()->success('Selam!', 'Tekrardan hoşgeldin. Welcome back!');
+            return redirect()->route('myprofile');
+        }
+        return redirect()->route('homepage')->withErrors('Email veya parola hatalı.');
     }
 }

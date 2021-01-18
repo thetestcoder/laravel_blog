@@ -56,10 +56,11 @@ Route::prefix('admin')->name('admin.')->middleware('Admin')->group(function (){
 
 });
 // User View
-
-Route::middleware('auth')->prefix('myuser')->namespace('myuser')->group( function (){
+Route::middleware('Admin')->prefix('myuser')->namespace('myuser')->group( function (){
     Route::get('/', [\App\Http\Controllers\Front\UserController::class, 'index'])->name('myprofile');
+    Route::post('/', [\App\Http\Controllers\Front\UserController::class, 'login_post'])->name('myprofile.post');
 });
+
 
 
 // Frontend View

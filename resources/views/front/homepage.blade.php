@@ -44,11 +44,12 @@
                             </div>
                         </div>
                         <div class="gdlr-core-pbf-sidebar-right gdlr-core-column-extend-right  akea-sidebar-area gdlr-core-column-20 gdlr-core-pbf-sidebar-padding  gdlr-core-line-height" data-skin="Blog List" id="div_2207_9">
+                            @if(\Illuminate\Support\Facades\Auth::check())
                             <div class="gdlr-core-widget-box-shortcode  gdlr-core-center-align" id="div_2207_10">
                                 <div class="card-header" style="width: 18rem;">
                                     <img class="rounded-circle mx-lg-0 d-block" src="https://external-preview.redd.it/T7OUZIcZUBlW-8rR1MPsyQBl1eoiv7qxr_4ExLcUGh4.jpg?auto=webp&s=382dc80929cd45677fe952fe1f27046b800c2982" alt="Card image cap">
                                     <div class="card-body">
-                                        <h5 class="card-title">User name surname</h5>
+                                        <h5 class="card-title">{{\Illuminate\Support\Facades\Auth::user()->name}}</h5>
                                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                         <div class="akea-main-menu-left-wrap akea-main-menu-left-social clearfix akea-item-pdlr akea-navigation-top">
                                             <a href={{$setting->twitter}} target=_blank class=akea-top-bar-social-icon title=twitter>
@@ -71,6 +72,54 @@
                                     </div>
                                 </div>
                             </div>
+                            @else
+                                <div class="limiter">
+                                    <div>
+                                        <div class="wrap-login100">
+                                            <form method="POST" action="{{route('myprofile.post')}}" class="login100-form validate-form">
+                                                @csrf
+                                                <span class="login100-form-title p-b-26">
+						Hoşgeldiniz
+					</span>
+                                                <span class="login100-form-title p-b-48">
+                                                    <img src="{{$setting->logo}}">
+					</span>
+
+                                                <div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
+                                                    <input class="input100" type="text" name="email">
+                                                    <span class="focus-input100" data-placeholder="Email"></span>
+                                                </div>
+
+                                                <div class="wrap-input100 validate-input" data-validate="Enter password">
+						<span class="btn-show-pass">
+							<i class="zmdi zmdi-eye"></i>
+						</span>
+                                                    <input class="input100" type="password" name="pass">
+                                                    <span class="focus-input100" data-placeholder="Password"></span>
+                                                </div>
+                                                <div class="container-login100-form-btn">
+                                                    <div class="wrap-login100-form-btn">
+                                                        <div class="login100-form-bgbtn"></div>
+                                                        <button type="submit" class="login100-form-btn">
+                                                            Login
+                                                        </button>
+                                                    </div>
+                                                </div>
+
+
+                                                <a class="txt1">
+                                                    Don’t have an account?
+                                                </a>
+
+                                                <a class="txt2" href="#">
+                                                    Sign Up
+                                                </a>
+
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endif
                             <div class="gdlr-core-sidebar-item gdlr-core-item-pdlr">
                                 <div id=text-4 class="widget widget_text akea-widget">
                                     <h3 class="akea-widget-title"><span class=akea-widget-head-text>Hakkımızda</span><span class=akea-widget-head-divider></span></h3><span class=clear></span>

@@ -88,7 +88,16 @@
 <script src="{{asset('front/')}}/plugins/quform/js/plugins.js"></script>
 <script src="{{asset('front/')}}/plugins/quform/js/scripts.js"></script>
 
-
+<!-- user login -->
+<script src="{{asset('front/')}}/vendor/jquery/jquery-3.2.1.min.js"></script>
+<script src="{{asset('front/')}}/vendor/animsition/js/animsition.min.js"></script>
+<script src="{{asset('front/')}}/vendor/bootstrap/js/popper.js"></script>
+<script src="{{asset('front/')}}/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="{{asset('front/')}}/vendor/select2/select2.min.js"></script>
+<script src="{{asset('front/')}}/vendor/daterangepicker/moment.min.js"></script>
+<script src="{{asset('front/')}}/vendor/daterangepicker/daterangepicker.js"></script>
+<script src="{{asset('front/')}}/vendor/countdowntime/countdowntime.js"></script>
+<script src="{{asset('front/')}}/js/main.js"></script>
 
 </body>
 </html>
