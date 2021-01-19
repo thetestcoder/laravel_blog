@@ -67,58 +67,13 @@
                                         </div>
                                         <br>
                                             <div class="button-input">
-                                                <a href="{{route('myprofile')}}" style="color: black" class="btn btn-outline-success">Profili Gör</a> <a style="color: black" class="btn btn-outline-danger">Çıkış</a>
+                                                <a href="{{route('myuser.myprofile')}}" style="color: black" class="btn btn-outline-success">Profili Gör</a> <a style="color: black" class="btn btn-outline-danger">Çıkış</a>
                                             </div>
                                     </div>
                                 </div>
                             </div>
                             @else
-                                <div class="limiter">
-                                    <div>
-                                        <div class="wrap-login100">
-                                            <form method="POST" action="{{route('myprofile.post')}}" class="login100-form validate-form">
-                                                @csrf
-                                                <span class="login100-form-title p-b-26">
-						Hoşgeldiniz
-					</span>
-                                                <span class="login100-form-title p-b-48">
-                                                    <img src="{{$setting->logo}}">
-					</span>
-
-                                                <div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
-                                                    <input class="input100" type="text" name="email">
-                                                    <span class="focus-input100" data-placeholder="Email"></span>
-                                                </div>
-
-                                                <div class="wrap-input100 validate-input" data-validate="Enter password">
-						<span class="btn-show-pass">
-							<i class="zmdi zmdi-eye"></i>
-						</span>
-                                                    <input class="input100" type="password" name="pass">
-                                                    <span class="focus-input100" data-placeholder="Password"></span>
-                                                </div>
-                                                <div class="container-login100-form-btn">
-                                                    <div class="wrap-login100-form-btn">
-                                                        <div class="login100-form-bgbtn"></div>
-                                                        <button type="submit" class="login100-form-btn">
-                                                            Login
-                                                        </button>
-                                                    </div>
-                                                </div>
-
-
-                                                <a class="txt1">
-                                                    Don’t have an account?
-                                                </a>
-
-                                                <a class="txt2" href="#">
-                                                    Sign Up
-                                                </a>
-
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
+                                @include('auth.login')
                             @endif
                             <div class="gdlr-core-sidebar-item gdlr-core-item-pdlr">
                                 <div id=text-4 class="widget widget_text akea-widget">

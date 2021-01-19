@@ -26,6 +26,7 @@ class HomepageController extends Controller
     public function __construct(){
         view()->share('pages', Page::orderBy('order', 'ASC')->get());
         view()->share('categories', Category::inRandomOrder()->get());
+
     }
     public function index(){
         $data['articles']=Article::orderBy('created_at', 'DESC')->paginate(10);

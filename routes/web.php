@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ImageController;
+use App\Http\Controllers\Front\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +17,8 @@ use App\Http\Controllers\ImageController;
 
 // Admin
 
-Route::get('login', 'App\Http\Controllers\Admin\HomeController@login')->name('admin.auth.login');
-Route::post('login', 'App\Http\Controllers\Admin\HomeController@login_post')->name('admin.auth.login.post');
+Route::get('admin/login', 'App\Http\Controllers\Admin\HomeController@login')->name('admin.auth.login');
+Route::post('admin/login', 'App\Http\Controllers\Admin\HomeController@login_post')->name('admin.auth.login.post');
 
 
 Route::prefix('admin')->name('admin.')->middleware('Admin')->group(function (){
@@ -56,7 +56,7 @@ Route::prefix('admin')->name('admin.')->middleware('Admin')->group(function (){
 
 });
 // User View
-Route::middleware('Admin')->prefix('myuser')->namespace('myuser')->group( function (){
+Route::middleware('Admin')->prefix('myuser')->name('myuser.')->group( function (){
     Route::get('/', [\App\Http\Controllers\Front\UserController::class, 'index'])->name('myprofile');
     Route::post('/', [\App\Http\Controllers\Front\UserController::class, 'login_post'])->name('myprofile.post');
 });

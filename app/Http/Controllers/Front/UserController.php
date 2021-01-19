@@ -22,11 +22,24 @@ class UserController extends Controller
     public function __construct(){
         view()->share('pages', Page::orderBy('order', 'ASC')->get());
         view()->share('categories', Category::inRandomOrder()->get());
+        //$this->middleware('Admin');
     }
 
     public function index()
     {
         return view('front.user_profile');
+    }
+
+    public function login(){
+        return view('dashboard');
+    }
+
+    public function myprofile_post(Request $request){
+        if(Auth::attempt(['email'=>$request->email, 'password'=>$request->password])){
+            toastr()->success('Selam!', 'Tekrardan hoşgeldin. Welcome back!');
+            return redirect()->route('/homepage');
+        }
+        return redirect()->route('/homepage')->withErrors('Email veya parola hatalı.');
     }
 
     /**
@@ -95,11 +108,5 @@ class UserController extends Controller
         //
     }
 
-    public function login_post(Request $request){
-        if(Auth::attempt(['email'=>$request->email, 'password'=>$request->password])){
-            toastr()->success('Selam!', 'Tekrardan hoşgeldin. Welcome back!');
-            return redirect()->route('myprofile');
-        }
-        return redirect()->route('homepage')->withErrors('Email veya parola hatalı.');
-    }
+
 }
