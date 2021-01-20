@@ -54,7 +54,7 @@
                         <th>Kategori</th>
                         <th>Oluşturulma Tarihi</th>
                         <th>Hit/Tıklanma</th>
-                        <th>Status / Durum</th>
+                        <th>Post Status</th>
                         <th>Islemler</th>
                     </tr>
                     </thead>
@@ -154,5 +154,6 @@
                 $('#deleteModal').modal();
             });
         })
+
     </script>
 @endsection

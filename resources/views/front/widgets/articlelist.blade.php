@@ -4,7 +4,7 @@
         <div class="gdlr-core-blog-thumbnail-wrap clearfix">
             <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
                 <a href=#><img src="{{asset($article->image)}}" alt width=1000 height=486 title=pexels-photo-871053></a>
-            </div><a href=# class=zilla-likes id=zilla-likes-6613 title="Like this"><span class=zilla-likes-count>261</span> <span class=zilla-likes-postfix></span></a></div>
+            </div><a href=# class=zilla-likes id=zilla-likes-6613 title="Like this"><span class=zilla-likes-count>{{$article->hit}}</span> <span class=zilla-likes-postfix></span></a></div>
         <div class=gdlr-core-blog-full-content-wrap>
 
             <div class="gdlr-core-blog-full-head clearfix">

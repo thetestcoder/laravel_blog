@@ -30,6 +30,7 @@ Route::prefix('admin')->name('admin.')->middleware('Admin')->group(function (){
     Route::get('forgetpassword', 'App\Http\Controllers\Admin\HomeController@forget')->name('auth.forget');
     Route::get('posts', 'App\Http\Controllers\Admin\PostsController@index')->name('posts.index');
     Route::get('switch','App\Http\Controllers\Admin\PostsController@switch')->name('switch');
+    Route::put('hot_posts','App\Http\Controllers\Admin\PostsController@hot_posts')->name('hot_posts');
     Route::get('posts/create', 'App\Http\Controllers\Admin\PostsController@create')->name('posts.create');
     Route::get('create/{post_id}', 'App\Http\Controllers\Admin\ImageController@create')->name('admin_image_add');
     Route::post('store/{post_id}', 'App\Http\Controllers\Admin\ImageController@store')->name('admin_image_store');
@@ -57,8 +58,10 @@ Route::prefix('admin')->name('admin.')->middleware('Admin')->group(function (){
 });
 // User View
 Route::middleware('Admin')->prefix('myuser')->name('myuser.')->group( function (){
-    Route::get('/', [\App\Http\Controllers\Front\UserController::class, 'index'])->name('myprofile');
+    Route::get('/myprofile', [\App\Http\Controllers\Front\UserController::class, 'index'])->name('myprofile');
     Route::post('/', [\App\Http\Controllers\Front\UserController::class, 'login_post'])->name('myprofile.post');
+    Route::patch('/myprofile', [\App\Http\Controllers\Front\UserController::class, 'update'])->name('myprofile.update');
+
 });
 
 

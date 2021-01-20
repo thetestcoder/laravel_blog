@@ -104,4 +104,6 @@ class PostsController extends Controller
         toastr()->success('Başarılı, Gönderi başarıyla silindi.');
         return redirect()->route('admin.posts.index');
     }
+
+
 }

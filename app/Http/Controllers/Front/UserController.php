@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 use App\Models\Admin;
+use Illuminate\Support\Str;
 
 
 class UserController extends Controller
@@ -22,7 +23,7 @@ class UserController extends Controller
     public function __construct(){
         view()->share('pages', Page::orderBy('order', 'ASC')->get());
         view()->share('categories', Category::inRandomOrder()->get());
-        //$this->middleware('Admin');
+        $this->middleware('Admin');
     }
 
     public function index()
@@ -78,11 +79,11 @@ class UserController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  \App\Models\User  $user
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
-    public function edit(User $user)
-    {
-        //
+    public function edit(){
+        return view('front.user_profile')->with('user', \auth()->user());
+
     }
 
     /**
@@ -90,12 +91,19 @@ class UserController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Models\User  $user
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request)
     {
-        //
+        dd($request->all());
     }
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\User  $user
+     * @return \Illuminate\Http\RedirectResponse
+     */
 
     /**
      * Remove the specified resource from storage.

@@ -16,8 +16,16 @@ class Admin extends Migration
         Schema::create('admin', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('surname');
+            $table->string('username');
             $table->string('email');
             $table->string('password');
+            $table->string('twitter');
+            $table->string('github');
+            $table->string('job');
+            $table->string('ulke');
+            $table->string('sehir');
+            $table->string('hobileriniz');
             $table->timestamps();
         });
     }

@@ -95,3 +95,75 @@ return redirect()->route('homepage');
 }
 return redirect()->route('homepage')->withErrors('Email veya parola hatalı.');
 }
+
+
+<!-- USER PROFILE -->
+<div class=gdlr-core-page-builder-body>
+    <div class="widget akea-align-center">
+        <div class="container rounded bg-white mt-5 mb-5">
+            <div class="row">
+                <div class="col-md-3 border-right">
+                    <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded mx-auto d-block" src="https://external-preview.redd.it/T7OUZIcZUBlW-8rR1MPsyQBl1eoiv7qxr_4ExLcUGh4.jpg?auto=webp&s=382dc80929cd45677fe952fe1f27046b800c2982">
+                        <br><span class="font-weight-bold">{{\Illuminate\Support\Facades\Auth::user()->username}}</span>
+                        <span class="text-black-50">{{\Illuminate\Support\Facades\Auth::user()->email}}</span><br><br>
+                    </div>
+                </div>
+                <form method="POST" action="{{route('myuser.myprofile.update')}}">
+                    @csrf
+                    <div class="col-lg-12 border-right">
+                        <div class="p-3 py-5">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h4 class="text-right">Profile Settings</h4>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-md-6"><label for="name" class="labels">Ad</label><input type="text" class="form-control" placeholder="first name" value="{{\Illuminate\Support\Facades\Auth::user()->name}}"></div>
+                                <div class="col-md-6"><label for="surname" class="labels">Soyad</label><input type="text" class="form-control" value="{{\Illuminate\Support\Facades\Auth::user()->surname}}" placeholder="surname"></div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-12"><label for="email" class="labels">Email</label><input type="text" class="form-control" placeholder="enter email id" value="{{\Illuminate\Support\Facades\Auth::user()->email}}"></div>
+                                <div class="col-md-12"><label for="job" class="labels">Meslek</label><input type="text" class="form-control" placeholder="education" value="{{\Illuminate\Support\Facades\Auth::user()->job}}"></div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-6"><label for="ulke" class="labels">Ülke</label><input type="text" class="form-control" placeholder="country" value="{{\Illuminate\Support\Facades\Auth::user()->ulke}}"></div>
+                                <div class="col-md-6"><label for="sehir" class="labels">Şehir</label><input type="text" class="form-control" value="{{\Illuminate\Support\Facades\Auth::user()->sehir}}" placeholder="state"></div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-6"><label for="twitter" class="labels">Twitter</label><input type="text" class="form-control" placeholder="country" value="{{\Illuminate\Support\Facades\Auth::user()->twitter}}"></div>
+                                <div class="col-md-6"><label for="github" class="labels">Github</label><input type="text" class="form-control" value="{{\Illuminate\Support\Facades\Auth::user()->github}}" placeholder="state"></div>
+                            </div>
+                            <div class="p-3 py-5">
+                                <div class="d-flex justify-content-between align-items-center experience"><span>Edit Experience</span><span class="border px-3 p-1 add-experience"><i class="fa fa-plus"></i>&nbsp;Experience</span></div><br>
+                                <div class="col-md-12"><textarea class="labels">Hobilerin</textarea><input type="text" class="form-control" placeholder="experience" value="{{\Illuminate\Support\Facades\Auth::user()->hobileriniz}}"></div> <br>
+                            </div>
+                            <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="submit">Save Profile</button></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="gdlr-core-recent-post-widget clearfix">
+    <div class="gdlr-core-recent-post-widget-thumbnail gdlr-core-media-image"><img src=upload/qingbao-meng-330658-unsplash-150x150.jpg alt width=150 height=150 title=qingbao-meng-330658-unsplash></div>
+    <div class=gdlr-core-recent-post-widget-content>
+        <div class=gdlr-core-recent-post-widget-title><a href=#>The Most Beautiful Green Field on Earth</a></div>
+        <div class=gdlr-core-recent-post-widget-info><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><img alt src='upload/avatar.jpeg' class='avatar avatar-50 photo' height=50 width=50><a href=# title="Posts by Paul Newman" rel=author>Paul Newman</a></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><a href=#>September 5, 2019</a></span></div>
+    </div>
+</div>
+@php
+$latest = DB::table('articles')->orderBy('hit', 'desc')->limit(5)->get();
+@endphp
+@foreach($latest as $row)
+<div class="gdlr-core-recent-post-widget clearfix">
+    <div class="gdlr-core-recent-post-widget-thumbnail gdlr-core-media-image"><img src={{asset($row->image)}} alt width=150 height=150 title=qingbao-meng-330658-unsplash></div>
+    <div class=gdlr-core-recent-post-widget-content>
+        <div class=gdlr-core-recent-post-widget-title><a href=#>{{$row->title}}</a></div>
+        <div class=gdlr-core-recent-post-widget-info><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><img alt src='upload/avatar.jpeg' class='avatar avatar-50 photo' height=50 width=50><a href=# title="Posts by Paul Newman" rel=author>Paul Newman</a></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><a href=#>{{$row->created_at}}</a></span></div>
+    </div>
+</div>
+
+@endforeach
+
+

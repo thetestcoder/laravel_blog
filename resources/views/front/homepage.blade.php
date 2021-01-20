@@ -113,29 +113,17 @@
                                     </div>
                                 </div>
                                 <div id=gdlr-core-recent-post-widget-2 class="widget widget_gdlr-core-recent-post-widget akea-widget">
-                                    <h3 class="akea-widget-title"><span class=akea-widget-head-text>Popular Post</span><span class=akea-widget-head-divider></span></h3><span class=clear></span>
+                                    <h3 class="akea-widget-title"><span class=akea-widget-head-text>En popüler yazılar</span><span class=akea-widget-head-divider></span></h3><span class=clear></span>
                                     <div class="gdlr-core-recent-post-widget-wrap gdlr-core-style-1">
-                                        <div class="gdlr-core-recent-post-widget clearfix">
-                                            <div class="gdlr-core-recent-post-widget-thumbnail gdlr-core-media-image"><img src=upload/qingbao-meng-330658-unsplash-150x150.jpg alt width=150 height=150 title=qingbao-meng-330658-unsplash></div>
-                                            <div class=gdlr-core-recent-post-widget-content>
-                                                <div class=gdlr-core-recent-post-widget-title><a href=#>The Most Beautiful Green Field on Earth</a></div>
-                                                <div class=gdlr-core-recent-post-widget-info><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><img alt src='upload/avatar.jpeg' class='avatar avatar-50 photo' height=50 width=50><a href=# title="Posts by Paul Newman" rel=author>Paul Newman</a></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><a href=#>September 5, 2019</a></span></div>
+                                            <div class="gdlr-core-recent-post-widget clearfix">
+                                            @foreach($articles as $post)
+                                                <div class="gdlr-core-recent-post-widget-thumbnail gdlr-core-media-image"><img src={{asset($post->image)}} alt width=150 height=150 title=qingbao-meng-330658-unsplash></div>
+                                                <div class=gdlr-core-recent-post-widget-content>
+                                                    <div class=gdlr-core-recent-post-widget-title><a href=#>{{$post->title}}</a></div>
+                                                    <div class=gdlr-core-recent-post-widget-info><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><img alt src='upload/avatar.jpeg' class='avatar avatar-50 photo' height=50 width=50><a href=# title="Posts by Paul Newman" rel=author>Paul Newman</a></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><a href=#>{{$post->created_at->diffForHumans()}}</a></span></div>
+                                                </div>
+                                                @endforeach
                                             </div>
-                                        </div>
-                                        <div class="gdlr-core-recent-post-widget clearfix">
-                                            <div class="gdlr-core-recent-post-widget-thumbnail gdlr-core-media-image"><img src=upload/alexander-mils-365917-unsplash-150x150.jpg alt width=150 height=150 title=alexander-mils-365917-unsplash></div>
-                                            <div class=gdlr-core-recent-post-widget-content>
-                                                <div class=gdlr-core-recent-post-widget-title><a href=#>How to Shoot Food on Your Phone Like a Pro</a></div>
-                                                <div class=gdlr-core-recent-post-widget-info><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><img alt src='upload/avatar.jpeg' class='avatar avatar-50 photo' height=50 width=50><a href=# title="Posts by Kally Gordon" rel=author>Kally Gordon</a></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><a href=#>August 5, 2019</a></span></div>
-                                            </div>
-                                        </div>
-                                        <div class="gdlr-core-recent-post-widget clearfix">
-                                            <div class="gdlr-core-recent-post-widget-thumbnail gdlr-core-media-image"><img src=upload/gaetano-cessati-120488-unsplash-150x150.jpg alt width=150 height=150 title=gaetano-cessati-120488-unsplash></div>
-                                            <div class=gdlr-core-recent-post-widget-content>
-                                                <div class=gdlr-core-recent-post-widget-title><a href=#>One Of The Most Beautiful Beach In Brazil</a></div>
-                                                <div class=gdlr-core-recent-post-widget-info><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><img alt src='upload/avatar.jpeg' class='avatar avatar-50 photo' height=50 width=50><a href=# title="Posts by Paul Newman" rel=author>Paul Newman</a></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><a href=#>July 25, 2019</a></span></div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                                 <div id=text-5 class="widget widget_text akea-widget">

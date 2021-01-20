@@ -14,9 +14,17 @@ class AdminSeeder extends Seeder
     public function run()
     {
         DB::table('admin')->insert([
-           'name'=>'Umut Çaylı',
+            'name'=>'Umut',
+            'surname'=>'Çaylı',
+            'username'=>'umutlion',
             'email'=>'umutcaayli@gmail.com',
             'password'=>bcrypt(123321),
+            'twitter'=>'https://twitter.com/kafadanpilot',
+            'github'=>'https://github.com/umutlion',
+            'job'=>'Backend Developer',
+            'ulke'=>'Turkiye',
+            'sehir'=>'Istanbul',
+            'hobileriniz'=>'Futbol maçı izlemek, kod yazmak bir hobi değildir ve bir sürü daha şey var.',
             'created_at'=>now(),
             'updated_at'=>now(),
         ]);
