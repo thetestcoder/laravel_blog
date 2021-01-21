@@ -42,6 +42,10 @@ class HomepageController extends Controller
         $data['categories']=Category::inRandomOrder()->get();
         $data['images']=Image::inRandomOrder()->get();
 
+        $data['relatedPosts'] = Article::where('id', "!=", $category->id)->take(2)->get();
+        $data['next'] = Article::where('id', '>', $article->id)->orderBy('id')->first();
+        $data['previous'] = Article::where('id', '<', $article->id)->orderBy('id', 'DESC')->first();
+
         return view('front.single',$data);
     }
 

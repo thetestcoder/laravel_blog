@@ -94,20 +94,20 @@
                                         <div class="gdlr-core-widget-box-shortcode  gdlr-core-center-align" id="div_2207_10">
                                             <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-center-align gdlr-core-title-item-caption-top" id="div_2207_11">
                                                 <div class="gdlr-core-title-item-title-wrap ">
-                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " id="h3_2207_9">Follow Us<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
+                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " id="h3_2207_9">Bizi Takip Edin<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
                                             </div>
-                                            <div class="gdlr-core-social-network-item gdlr-core-item-pdb  gdlr-core-none-align" id="div_2207_12"><a href=# target=_blank class=gdlr-core-social-network-icon title=facebook id="a_2207_11" rel="noopener noreferrer"><i class="fa fa-facebook" ></i></a><a href=# target=_blank class=gdlr-core-social-network-icon title=pinterest id="a_2207_12" rel="noopener noreferrer"><i class="fa fa-pinterest-p" ></i></a><a href=# target=_blank class=gdlr-core-social-network-icon title=skype id="a_2207_13" rel="noopener noreferrer"><i class="fa fa-skype" ></i></a><a href=# target=_blank class=gdlr-core-social-network-icon title=twitter id="a_2207_14" rel="noopener noreferrer"><i class="fa fa-twitter" ></i></a><a href=# target=_blank class=gdlr-core-social-network-icon title=instagram id="a_2207_15" rel="noopener noreferrer"><i class="fa fa-instagram" ></i></a></div>
+                                            <div class="gdlr-core-social-network-item gdlr-core-item-pdb  gdlr-core-none-align" id="div_2207_12"><a href={{$setting->twitter}} target=_blank class=gdlr-core-social-network-icon title=twitter id="a_2207_11" rel="noopener noreferrer"><i class="fa fa-twitter" ></i></a><a href={{$setting->github}} target=_blank class=gdlr-core-social-network-icon title=github id="a_2207_12" rel="noopener noreferrer"><i class="fa fa-github" ></i></a><a href={{$setting->linkedin}} target=_blank class=gdlr-core-social-network-icon title=linkedin id="a_2207_13" rel="noopener noreferrer"><i class="fa fa-linkedin" ></i></a><a href={{$setting->medium}} target=_blank class=gdlr-core-social-network-icon title=twitter id="a_2207_14" rel="noopener noreferrer"><i class="fa fa-medium" ></i></a>
                                             <br> <span class=gdlr-core-space-shortcode id="span_2207_3"></span>
                                             <br>
                                             <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-center-align gdlr-core-title-item-caption-top" id="div_2207_13">
                                                 <div class="gdlr-core-title-item-title-wrap ">
-                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " id="h3_2207_10">Newsletter<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
-                                            </div> Fill your email below to subscribe to my newsletter<span class=gdlr-core-space-shortcode id="span_2207_4"></span>
+                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " id="h3_2207_10">Günlük Posta<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
+                                            </div>Gelişmelerden en hızlı haberdar olmak için email bültenimize abone olun.<span class=gdlr-core-space-shortcode id="span_2207_4"></span>
                                             <br>
                                             <div class="tnp tnp-subscription-minimal ">
                                                 <form action="#" method=post>
                                                     <input class=tnp-email type=email required name=ne value placeholder=Email>
-                                                    <input class=tnp-submit type=submit value=Subscribe>
+                                                    <input class=tnp-submit type=submit value=AboneOl>
                                                 </form>
                                             </div> <span class=gdlr-core-space-shortcode id="span_2207_5"></span></div>
                                     </div>
