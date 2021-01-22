@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Front\UserController;
+use Illuminate\Foundation\Application;
+
+use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +18,16 @@ use App\Http\Controllers\Front\UserController;
 */
 #Route::get('admin/panel','App\Http\Controllers\Back\Dashboard@index')->name('admin.dashboard');
 
+Route::get('/', function () {
+    return Inertia::render('Welcome', [
+        'canLogin' => Route::has('login'),
+        'canRegister' => Route::has('register'),
+        'laravelVersion' => Application::VERSION,
+        'phpVersion' => PHP_VERSION,
+    ]);
+});
+
+
 // Admin
 
 Route::get('admin/login', 'App\Http\Controllers\Admin\HomeController@login')->name('admin.auth.login');
@@ -22,6 +35,8 @@ Route::post('admin/login', 'App\Http\Controllers\Admin\HomeController@login_post
 
 
 Route::prefix('admin')->name('admin.')->middleware('Admin')->group(function (){
+    //user roles
+
     // posts
     Route::get('/', 'App\Http\Controllers\Admin\HomeController@index')->name('dashboard');
     Route::resource('posts', 'App\Http\Controllers\Admin\PostsController');
@@ -54,6 +69,16 @@ Route::prefix('admin')->name('admin.')->middleware('Admin')->group(function (){
     // Settings
     Route::get('/settings','App\Http\Controllers\Admin\SettingsController@index')->name('settings.index');
     Route::post('settings/update','App\Http\Controllers\Admin\SettingsController@update')->name('settings.update');
+
+    // roles
+
+    Route::get('/users', 'App\Http\Controllers\Admin\UserController@index')->name('users.index');
+    Route::get('/users/create', 'App\Http\Controllers\Admin\UserController@create')->name('users.create');
+
+    Route::post('/users/create', 'App\Http\Controllers\Admin\UserController@store')->name('users.store');
+    Route::get('/users/{user}/edit', 'App\Http\Controllers\Admin\UserController@edit')->name('users.edit');
+    Route::put('/users/{user}/update', 'App\Http\Controllers\Admin\UserController@update')->name('users.update');
+    Route::delete('/users/{user}/delete', 'App\Http\Controllers\Admin\UserController@destroy')->name('users.destroy');
 
 });
 // User View

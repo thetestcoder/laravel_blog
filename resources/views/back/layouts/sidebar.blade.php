@@ -86,6 +86,10 @@
                             <i class="fas fa-fw fa-folder"></i>Eklenebilir Sayfalar</a>
                     </li>
                     <li>
+                        <a href="{{route('admin.users.index')}}">
+                            <i class="fas fa-fw fa-user"></i>Kullanıcılar</a>
+                    </li>
+                    <li>
                         <a href="{{route('admin.settings.index')}}">
                             <i class="fas fa-fw fa-cogs"></i>Ayarlar</a>
                     </li>
