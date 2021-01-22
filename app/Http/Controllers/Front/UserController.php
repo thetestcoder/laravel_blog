@@ -20,10 +20,11 @@ class UserController extends Controller
      *
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
-    public function __construct(){
+    public function __construct()
+    {
         view()->share('pages', Page::orderBy('order', 'ASC')->get());
         view()->share('categories', Category::inRandomOrder()->get());
-        $this->middleware('Admin');
+        //$this->middleware('Admin');
     }
 
     public function index()
@@ -31,16 +32,18 @@ class UserController extends Controller
         return view('front.user_profile');
     }
 
-    public function login(){
+    public function login()
+    {
         return view('dashboard');
     }
 
-    public function myprofile_post(Request $request){
-        if(Auth::attempt(['email'=>$request->email, 'password'=>$request->password])){
+    public function myprofile_post(Request $request)
+    {
+        if (Auth::guard('users')->attempt(['email' => $request->email, 'password' => $request->password])) {
             toastr()->success('Selam!', 'Tekrardan hoşgeldin. Welcome back!');
-            return redirect()->route('/homepage');
+            return redirect()->route('homepage');
         }
-        return redirect()->route('/homepage')->withErrors('Email veya parola hatalı.');
+        return redirect()->route('homepage')->withErrors('Email veya parola hatalı.');
     }
 
     /**
@@ -56,7 +59,7 @@ class UserController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -67,7 +70,7 @@ class UserController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\User  $user
+     * @param \App\Models\User $user
      * @return \Illuminate\Http\Response
      */
     public function show(User $user)
@@ -78,10 +81,11 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\User  $user
+     * @param \App\Models\User $user
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
-    public function edit(){
+    public function edit()
+    {
         return view('front.user_profile')->with('user', \auth()->user());
 
     }
@@ -89,8 +93,8 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\User  $user
+     * @param \Illuminate\Http\Request $request
+     * @param \App\Models\User $user
      * @return \Illuminate\Http\RedirectResponse
      */
     public function update(Request $request)
@@ -100,15 +104,15 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\User  $user
+     * @param \Illuminate\Http\Request $request
+     * @param \App\Models\User $user
      * @return \Illuminate\Http\RedirectResponse
      */
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\User  $user
+     * @param \App\Models\User $user
      * @return \Illuminate\Http\Response
      */
     public function destroy(User $user)
